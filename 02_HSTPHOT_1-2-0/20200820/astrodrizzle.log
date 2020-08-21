@@ -1,0 +1,846 @@
+[INFO    ] Setting up logfile :  astrodrizzle.log
+[INFO    ] AstroDrizzle Version 3.1.6 (2020-02-19 16:16:30 -0500) started at: 13:38:10.754 (20/08/2020)
+[INFO    ] 
+[INFO    ] Version Information
+[INFO    ] --------------------
+[INFO    ] Python Version [Clang 9.0.1 ]
+[INFO    ] 3.7.6 | packaged by conda-forge | (default, Jun  1 2020, 18:33:30) 
+[INFO    ] numpy Version -> 1.18.5 
+[INFO    ] astropy Version -> 4.0.1.post1 
+[INFO    ] stwcs Version -> 1.5.3 
+[INFO    ] ==== Processing Step  Initialization  started at  13:38:10.756 (20/08/2020)
+[INFO    ] 
+[INFO    ] Executing serially
+[INFO    ] Setting up output name: iab901eqq_drz.fits
+[INFO    ] -Creating imageObject List as input for processing steps.
+[INFO    ] Reading in MDRIZSKY of 0.6575469970703125
+[INFO    ] Reset bit values of 4096 to a value of 0 in /Users/kbhirombhakdi/_work/_data/11552/G102_set/mastDownload/HST/iab901eqq/iab901eqq_flt.fits[DQ,1]
+[INFO    ] -Creating output WCS.
+[INFO    ] WCS Keywords
+[INFO    ] 
+[INFO    ] Number of WCS axes: 2
+[INFO    ] CTYPE : 'RA---TAN'  'DEC--TAN'  
+[INFO    ] CRVAL : 194.2571256637644  22.04353434894444  
+[INFO    ] CRPIX : 542.0  479.5  
+[INFO    ] CD1_1 CD1_2  : -2.8086993594181085e-05  -2.1914868753082748e-05  
+[INFO    ] CD2_1 CD2_2  : -2.1914868753082748e-05  2.8086993594181085e-05  
+[INFO    ] NAXIS : 1084  959
+[INFO    ] ********************************************************************************
+[INFO    ] *
+[INFO    ] *  Estimated memory usage:  up to 19 Mb.
+[INFO    ] *  Output image size:       1084 X 959 pixels. 
+[INFO    ] *  Output image file:       ~ 11 Mb. 
+[INFO    ] *  Cores available:         1
+[INFO    ] *
+[INFO    ] ********************************************************************************
+[INFO    ] ==== Processing Step Initialization finished at 13:38:10.93 (20/08/2020)
+[INFO    ] USER INPUT PARAMETERS common to all Processing Steps:
+[INFO    ] 	build :	True
+[INFO    ] 	coeffs :	True
+[INFO    ] 	context :	True
+[INFO    ] 	crbit :	4096
+[INFO    ] 	group :	
+[INFO    ] 	in_memory :	False
+[INFO    ] 	input :	/Users/kbhirombhakdi/_work/_data/11552/G102_set/mastDownload/HST/iab901eqq/iab901eqq_flt.fits
+[INFO    ] 	mdriztab :	False
+[INFO    ] 	num_cores :	None
+[INFO    ] 	output :	iab901eqq
+[INFO    ] 	proc_unit :	native
+[INFO    ] 	resetbits :	4096
+[INFO    ] 	runfile :	astrodrizzle.log
+[INFO    ] 	stepsize :	10
+[INFO    ] 	updatewcs :	False
+[INFO    ] 	wcskey :	
+[INFO    ] ==== Processing Step  Static Mask  started at  13:38:10.940 (20/08/2020)
+[INFO    ] 
+[INFO    ] USER INPUT PARAMETERS for Static Mask Step:
+[INFO    ] 	static :	True
+[INFO    ] 	static_sig :	4.0
+[INFO    ] Computing static mask:
+
+[INFO    ]   mode = -0.153700;   rms = 7.178047;   static_sig = 4.00
+[INFO    ] Saving static mask to disk: ./WFC3IR_1014x1014_1_staticMask.fits
+[INFO    ] ==== Processing Step Static Mask finished at 13:38:11.00 (20/08/2020)
+[INFO    ] ==== Processing Step  Subtract Sky  started at  13:38:11.008 (20/08/2020)
+[INFO    ] 
+[INFO    ] USER INPUT PARAMETERS for Sky Subtraction Step:
+[INFO    ] 	sky_bits :	0
+[INFO    ] 	skyclip :	5
+[INFO    ] 	skyfile :	
+[INFO    ] 	skylower :	None
+[INFO    ] 	skylsigma :	4.0
+[INFO    ] 	skymask_cat :	
+[INFO    ] 	skymethod :	localmin
+[INFO    ] 	skystat :	median
+[INFO    ] 	skysub :	True
+[INFO    ] 	skyupper :	None
+[INFO    ] 	skyuser :	
+[INFO    ] 	skyusigma :	4.0
+[INFO    ] 	skywidth :	0.1
+[INFO    ] 	use_static :	True
+[INFO    ] ***** skymatch started on 2020-08-20 13:38:11.032294
+[INFO    ]       Version 1.0.5
+[INFO    ] 
+[INFO    ] 'skymatch' task will apply computed sky differences to input image file(s).
+[INFO    ] 
+[INFO    ] NOTE: Computed sky values WILL NOT be subtracted from image data ('subtractsky'=False).
+[INFO    ] 'MDRIZSKY' header keyword will represent sky value *computed* from data.
+[INFO    ] 
+[INFO    ] -----  User specified keywords:  -----
+[INFO    ]        Sky Value Keyword:  'MDRIZSKY'
+[INFO    ]        Data Units Keyword: 'BUNIT'
+[INFO    ] 
+[INFO    ] 
+[INFO    ] -----  Input file list:  -----
+[INFO    ] 
+[INFO    ]    **  Input image: 'iab901eqq_flt.fits'
+[INFO    ]        EXT: 'SCI',1;	MASK: iab901eqq_skymatch_mask_sci1.fits[0]
+[INFO    ] 
+[INFO    ] -----  Sky statistics parameters:  -----
+[INFO    ]        statistics function: 'median'
+[INFO    ]        lower = None
+[INFO    ]        upper = None
+[INFO    ]        nclip = 5
+[INFO    ]        lsigma = 4.0
+[INFO    ]        usigma = 4.0
+[INFO    ]        binwidth = 0.1
+[INFO    ] 
+[INFO    ] -----  Data->Brightness conversion parameters for input files:  -----
+[INFO    ] 
+[INFO    ]    *   Image: iab901eqq_flt.fits
+[INFO    ]        EXT = 'SCI',1
+[INFO    ]              Data units type: COUNT-RATE
+[INFO    ]              Conversion factor (data->brightness):  60.797431635711504
+[INFO    ] 
+[INFO    ] 
+[INFO    ] -----  Computing sky values requested image extensions (detector chips):  -----
+[INFO    ] 
+[INFO    ]    *   Image:   'iab901eqq_flt.fits['SCI',1]'  --  SKY = 39.977168601649716 (brightness units)
+[INFO    ]        Sky change (data units):
+[INFO    ]       - EXT = 'SCI',1   delta(MDRIZSKY) = 0.657547   NEW MDRIZSKY = 0.657547
+[INFO    ] ***** skymatch ended on 2020-08-20 13:38:11.162374
+[INFO    ] TOTAL RUN TIME: 0:00:00.130080
+[INFO    ] ==== Processing Step Subtract Sky finished at 13:38:11.184 (20/08/2020)
+[INFO    ] ==== Processing Step  Separate Drizzle  started at  13:38:11.186 (20/08/2020)
+[INFO    ] 
+[INFO    ] Interpreted paramDict with single=True as:
+{'build': True, 'stepsize': 10, 'coeffs': True, 'wcskey': '', 'kernel': 'turbo', 'wt_scl': 'exptime', 'pixfrac': 1.0, 'fillval': None, 'bits': 0, 'compress': False, 'units': 'cps'}
+[INFO    ] USER INPUT PARAMETERS for Separate Drizzle Step:
+[INFO    ] 	bits :	0
+[INFO    ] 	build :	False
+[INFO    ] 	clean :	True
+[INFO    ] 	coeffs :	True
+[INFO    ] 	compress :	False
+[INFO    ] 	crbit :	None
+[INFO    ] 	fillval :	None
+[INFO    ] 	kernel :	turbo
+[INFO    ] 	num_cores :	None
+[INFO    ] 	pixfrac :	1.0
+[INFO    ] 	proc_unit :	electrons
+[INFO    ] 	stepsize :	10
+[INFO    ] 	units :	cps
+[INFO    ] 	wcskey :	
+[INFO    ] 	wht_type :	None
+[INFO    ] 	wt_scl :	exptime
+[INFO    ]   **Using sub-sampling value of 10 for kernel turbo
+[INFO    ] Running Drizzle to create output frame with WCS of: 
+[INFO    ] WCS Keywords
+[INFO    ] 
+[INFO    ] Number of WCS axes: 2
+[INFO    ] CTYPE : 'RA---TAN'  'DEC--TAN'  
+[INFO    ] CRVAL : 194.2571256637644  22.04353434894444  
+[INFO    ] CRPIX : 542.0  479.5  
+[INFO    ] CD1_1 CD1_2  : -2.8086993594181085e-05  -2.1914868753082748e-05  
+[INFO    ] CD2_1 CD2_2  : -2.1914868753082748e-05  2.8086993594181085e-05  
+[INFO    ] NAXIS : 1084  959
+[INFO    ] Executing serially
+[INFO    ] -Drizzle input: /Users/kbhirombhakdi/_work/_data/11552/G102_set/mastDownload/HST/iab901eqq/iab901eqq_flt.fits[sci,1]
+[INFO    ] Applying sky value of 0.657547 to /Users/kbhirombhakdi/_work/_data/11552/G102_set/mastDownload/HST/iab901eqq/iab901eqq_flt.fits[sci,1]
+[INFO    ] Using WCSLIB-based coordinate transformation...
+[INFO    ] stepsize = 10
+[INFO    ] -Drizzling using kernel = turbo
+
+[INFO    ] -Generating simple FITS output: /Users/kbhirombhakdi/_work/_data/11552/G102_set/mastDownload/HST/iab901eqq/iab901eqq_single_sci.fits
+[WARNING ] /Users/kbhirombhakdi/anaconda3/envs/py3/lib/python3.7/site-packages/astropy/io/fits/card.py:1003: VerifyWarning: Card is too long, comment will be truncated.
+  VerifyWarning)
+
+[INFO    ] Writing out image to disk: /Users/kbhirombhakdi/_work/_data/11552/G102_set/mastDownload/HST/iab901eqq/iab901eqq_single_sci.fits
+[INFO    ] Writing out image to disk: /Users/kbhirombhakdi/_work/_data/11552/G102_set/mastDownload/HST/iab901eqq/iab901eqq_single_wht.fits
+[INFO    ] ==== Processing Step Separate Drizzle finished at 13:38:11.544 (20/08/2020)
+[INFO    ] ==== Processing Step  Create Median  started at  13:38:11.54 (20/08/2020)
+[INFO    ] 
+[INFO    ] USER INPUT PARAMETERS for Create Median Step:
+[INFO    ] 	combine_bufsize :	None
+[INFO    ] 	combine_grow :	1
+[INFO    ] 	combine_hthresh :	None
+[INFO    ] 	combine_lthresh :	None
+[INFO    ] 	combine_maskpt :	0.3
+[INFO    ] 	combine_nhigh :	0
+[INFO    ] 	combine_nlow :	0
+[INFO    ] 	combine_nsigma :	4 3
+[INFO    ] 	combine_type :	mean
+[INFO    ] 	compress :	False
+[INFO    ] 	median :	True
+[INFO    ] 	median_newmasks :	True
+[INFO    ] 	proc_unit :	native
+[INFO    ] reference sky value for image '/Users/kbhirombhakdi/_work/_data/11552/G102_set/mastDownload/HST/iab901eqq/iab901eqq_flt.fits' is 3.856238283172608
+[INFO    ] Saving output median image to: 'iab901eqq_med.fits'
+[INFO    ] ==== Processing Step Create Median finished at 13:38:11.738 (20/08/2020)
+[INFO    ] ==== Processing Step  Blot  started at  13:38:11.739 (20/08/2020)
+[INFO    ] 
+[INFO    ] USER INPUT PARAMETERS for Blot Step:
+[INFO    ] 	blot_addsky :	True
+[INFO    ] 	blot_interp :	poly5
+[INFO    ] 	blot_sinscl :	1.0
+[INFO    ] 	blot_skyval :	0.0
+[INFO    ] 	coeffs :	True
+[INFO    ]     Blot: creating blotted image:  /Users/kbhirombhakdi/_work/_data/11552/G102_set/mastDownload/HST/iab901eqq/iab901eqq_flt.fits[sci,1]
+[INFO    ] Using default C-based coordinate transformation...
+[INFO    ] Applying sky value of 0.657547 to blotted image /Users/kbhirombhakdi/_work/_data/11552/G102_set/mastDownload/HST/iab901eqq/iab901eqq_flt.fits[sci,1]
+[INFO    ] -Generating simple FITS output: /Users/kbhirombhakdi/_work/_data/11552/G102_set/mastDownload/HST/iab901eqq/iab901eqq_sci1_blt.fits
+[INFO    ] Writing out image to disk: /Users/kbhirombhakdi/_work/_data/11552/G102_set/mastDownload/HST/iab901eqq/iab901eqq_sci1_blt.fits
+[INFO    ] ==== Processing Step Blot finished at 13:38:12.04 (20/08/2020)
+[INFO    ] ==== Processing Step  Driz_CR  started at  13:38:12.050 (20/08/2020)
+[INFO    ] 
+[INFO    ] USER INPUT PARAMETERS for Driz_CR Step:
+[INFO    ] 	crbit :	4096
+[INFO    ] 	driz_cr :	True
+[INFO    ] 	driz_cr_corr :	False
+[INFO    ] 	driz_cr_ctegrow :	0
+[INFO    ] 	driz_cr_grow :	1
+[INFO    ] 	driz_cr_scale :	1.2 0.7
+[INFO    ] 	driz_cr_snr :	3.5 3.0
+[INFO    ] 	inmemory :	False
+[INFO    ] Executing serially
+[INFO    ] Creating output: /Users/kbhirombhakdi/_work/_data/11552/G102_set/mastDownload/HST/iab901eqq/iab901eqq_sci1_crmask.fits
+[INFO    ] ==== Processing Step Driz_CR finished at 13:38:12.247 (20/08/2020)
+[INFO    ] ==== Processing Step  Final Drizzle  started at  13:38:12.249 (20/08/2020)
+[INFO    ] 
+[INFO    ] Interpreted paramDict with single=False as:
+{'build': True, 'stepsize': 10, 'coeffs': True, 'wcskey': '', 'wht_type': 'EXP', 'kernel': 'square', 'wt_scl': 'exptime', 'pixfrac': 1.0, 'fillval': None, 'maskval': None, 'bits': 0, 'units': 'cps'}
+[INFO    ] USER INPUT PARAMETERS for Final Drizzle Step:
+[INFO    ] 	bits :	0
+[INFO    ] 	build :	True
+[INFO    ] 	clean :	True
+[INFO    ] 	coeffs :	True
+[INFO    ] 	crbit :	4096
+[INFO    ] 	fillval :	None
+[INFO    ] 	kernel :	square
+[INFO    ] 	maskval :	None
+[INFO    ] 	pixfrac :	1.0
+[INFO    ] 	proc_unit :	native
+[INFO    ] 	stepsize :	10
+[INFO    ] 	units :	cps
+[INFO    ] 	wcskey :	
+[INFO    ] 	wht_type :	EXP
+[INFO    ] 	wt_scl :	exptime
+[INFO    ]   **Using sub-sampling value of 10 for kernel square
+[INFO    ] Running Drizzle to create output frame with WCS of: 
+[INFO    ] WCS Keywords
+[INFO    ] 
+[INFO    ] Number of WCS axes: 2
+[INFO    ] CTYPE : 'RA---TAN'  'DEC--TAN'  
+[INFO    ] CRVAL : 194.2571256637644  22.04353434894444  
+[INFO    ] CRPIX : 542.0  479.5  
+[INFO    ] CD1_1 CD1_2  : -2.8086993594181085e-05  -2.1914868753082748e-05  
+[INFO    ] CD2_1 CD2_2  : -2.1914868753082748e-05  2.8086993594181085e-05  
+[INFO    ] NAXIS : 1084  959
+[INFO    ] -Drizzle input: /Users/kbhirombhakdi/_work/_data/11552/G102_set/mastDownload/HST/iab901eqq/iab901eqq_flt.fits[sci,1]
+[INFO    ] Applying sky value of 0.657547 to /Users/kbhirombhakdi/_work/_data/11552/G102_set/mastDownload/HST/iab901eqq/iab901eqq_flt.fits[sci,1]
+[INFO    ] Applying EXPTIME weighting to DQ mask for chip 1
+[INFO    ] Using WCSLIB-based coordinate transformation...
+[INFO    ] stepsize = 10
+[INFO    ] -Drizzling using kernel = square
+
+[INFO    ] -Generating multi-extension output file:  iab901eqq_drz.fits
+[INFO    ] Writing out to disk: iab901eqq_drz.fits
+[WARNING ] /Users/kbhirombhakdi/anaconda3/envs/py3/lib/python3.7/site-packages/astropy/io/fits/card.py:1003: VerifyWarning: Card is too long, comment will be truncated.
+  VerifyWarning)
+
+[INFO    ] ==== Processing Step Final Drizzle finished at 13:38:13.164 (20/08/2020)
+[INFO    ] 
+[INFO    ] AstroDrizzle Version 3.1.6 is finished processing at 13:38:13.166 (20/08/2020).
+[INFO    ] 
+[INFO    ] 
+[INFO    ] 
+[INFO    ]    --------------------          --------------------
+[INFO    ]                    Step          Elapsed time
+[INFO    ]    --------------------          --------------------
+[INFO    ] 
+[INFO    ]          Initialization          0.1817 sec.
+[INFO    ]             Static Mask          0.0667 sec.
+[INFO    ]            Subtract Sky          0.1758 sec.
+[INFO    ]        Separate Drizzle          0.3585 sec.
+[INFO    ]           Create Median          0.1923 sec.
+[INFO    ]                    Blot          0.3088 sec.
+[INFO    ]                 Driz_CR          0.1971 sec.
+[INFO    ]           Final Drizzle          0.9155 sec.
+[INFO    ]    ====================          ====================
+[INFO    ]                   Total          2.3965 sec.
+[INFO    ] 
+[INFO    ] Removing intermediate files for /Users/kbhirombhakdi/_work/_data/11552/G102_set/mastDownload/HST/iab901eqq/iab901eqq_flt.fits
+[INFO    ] Trailer file written to:  astrodrizzle.log
+[INFO    ] Setting up logfile :  astrodrizzle.log
+[INFO    ] AstroDrizzle Version 3.1.6 (2020-02-19 16:16:30 -0500) started at: 13:38:13.21 (20/08/2020)
+[INFO    ] 
+[INFO    ] Version Information
+[INFO    ] --------------------
+[INFO    ] Python Version [Clang 9.0.1 ]
+[INFO    ] 3.7.6 | packaged by conda-forge | (default, Jun  1 2020, 18:33:30) 
+[INFO    ] numpy Version -> 1.18.5 
+[INFO    ] astropy Version -> 4.0.1.post1 
+[INFO    ] stwcs Version -> 1.5.3 
+[INFO    ] ==== Processing Step  Initialization  started at  13:38:13.21 (20/08/2020)
+[INFO    ] 
+[INFO    ] Executing serially
+[INFO    ] Setting up output name: iab901eiq_drz.fits
+[INFO    ] -Creating imageObject List as input for processing steps.
+[INFO    ] Reading in MDRIZSKY of 0.7081025838851929
+[INFO    ] Reset bit values of 4096 to a value of 0 in /Users/kbhirombhakdi/_work/_data/11552/G102_set/mastDownload/HST/iab901eiq/iab901eiq_flt.fits[DQ,1]
+[INFO    ] -Creating output WCS.
+[INFO    ] WCS Keywords
+[INFO    ] 
+[INFO    ] Number of WCS axes: 2
+[INFO    ] CTYPE : 'RA---TAN'  'DEC--TAN'  
+[INFO    ] CRVAL : 194.25530306906586  22.026327826928597  
+[INFO    ] CRPIX : 542.0  479.5  
+[INFO    ] CD1_1 CD1_2  : -2.8086760251999103e-05  -2.191516781069986e-05  
+[INFO    ] CD2_1 CD2_2  : -2.191516781069986e-05  2.8086760251999103e-05  
+[INFO    ] NAXIS : 1084  959
+[INFO    ] ********************************************************************************
+[INFO    ] *
+[INFO    ] *  Estimated memory usage:  up to 19 Mb.
+[INFO    ] *  Output image size:       1084 X 959 pixels. 
+[INFO    ] *  Output image file:       ~ 11 Mb. 
+[INFO    ] *  Cores available:         1
+[INFO    ] *
+[INFO    ] ********************************************************************************
+[INFO    ] ==== Processing Step Initialization finished at 13:38:13.373 (20/08/2020)
+[INFO    ] USER INPUT PARAMETERS common to all Processing Steps:
+[INFO    ] 	build :	True
+[INFO    ] 	coeffs :	True
+[INFO    ] 	context :	True
+[INFO    ] 	crbit :	4096
+[INFO    ] 	group :	
+[INFO    ] 	in_memory :	False
+[INFO    ] 	input :	/Users/kbhirombhakdi/_work/_data/11552/G102_set/mastDownload/HST/iab901eiq/iab901eiq_flt.fits
+[INFO    ] 	mdriztab :	False
+[INFO    ] 	num_cores :	None
+[INFO    ] 	output :	iab901eiq
+[INFO    ] 	proc_unit :	native
+[INFO    ] 	resetbits :	4096
+[INFO    ] 	runfile :	astrodrizzle.log
+[INFO    ] 	stepsize :	10
+[INFO    ] 	updatewcs :	False
+[INFO    ] 	wcskey :	
+[INFO    ] ==== Processing Step  Static Mask  started at  13:38:13.37 (20/08/2020)
+[INFO    ] 
+[INFO    ] USER INPUT PARAMETERS for Static Mask Step:
+[INFO    ] 	static :	True
+[INFO    ] 	static_sig :	4.0
+[INFO    ] Computing static mask:
+
+[INFO    ]   mode =  0.255827;   rms = 7.189993;   static_sig = 4.00
+[INFO    ] Saving static mask to disk: ./WFC3IR_1014x1014_1_staticMask.fits
+[INFO    ] ==== Processing Step Static Mask finished at 13:38:13.419 (20/08/2020)
+[INFO    ] ==== Processing Step  Subtract Sky  started at  13:38:13.421 (20/08/2020)
+[INFO    ] 
+[INFO    ] USER INPUT PARAMETERS for Sky Subtraction Step:
+[INFO    ] 	sky_bits :	0
+[INFO    ] 	skyclip :	5
+[INFO    ] 	skyfile :	
+[INFO    ] 	skylower :	None
+[INFO    ] 	skylsigma :	4.0
+[INFO    ] 	skymask_cat :	
+[INFO    ] 	skymethod :	localmin
+[INFO    ] 	skystat :	median
+[INFO    ] 	skysub :	True
+[INFO    ] 	skyupper :	None
+[INFO    ] 	skyuser :	
+[INFO    ] 	skyusigma :	4.0
+[INFO    ] 	skywidth :	0.1
+[INFO    ] 	use_static :	True
+[INFO    ] ***** skymatch started on 2020-08-20 13:38:13.442594
+[INFO    ]       Version 1.0.5
+[INFO    ] 
+[INFO    ] 'skymatch' task will apply computed sky differences to input image file(s).
+[INFO    ] 
+[INFO    ] NOTE: Computed sky values WILL NOT be subtracted from image data ('subtractsky'=False).
+[INFO    ] 'MDRIZSKY' header keyword will represent sky value *computed* from data.
+[INFO    ] 
+[INFO    ] -----  User specified keywords:  -----
+[INFO    ]        Sky Value Keyword:  'MDRIZSKY'
+[INFO    ]        Data Units Keyword: 'BUNIT'
+[INFO    ] 
+[INFO    ] 
+[INFO    ] -----  Input file list:  -----
+[INFO    ] 
+[INFO    ]    **  Input image: 'iab901eiq_flt.fits'
+[INFO    ]        EXT: 'SCI',1;	MASK: iab901eiq_skymatch_mask_sci1.fits[0]
+[INFO    ] 
+[INFO    ] -----  Sky statistics parameters:  -----
+[INFO    ]        statistics function: 'median'
+[INFO    ]        lower = None
+[INFO    ]        upper = None
+[INFO    ]        nclip = 5
+[INFO    ]        lsigma = 4.0
+[INFO    ]        usigma = 4.0
+[INFO    ]        binwidth = 0.1
+[INFO    ] 
+[INFO    ] -----  Data->Brightness conversion parameters for input files:  -----
+[INFO    ] 
+[INFO    ]    *   Image: iab901eiq_flt.fits
+[INFO    ]        EXT = 'SCI',1
+[INFO    ]              Data units type: COUNT-RATE
+[INFO    ]              Conversion factor (data->brightness):  60.797431635711504
+[INFO    ] 
+[INFO    ] 
+[INFO    ] -----  Computing sky values requested image extensions (detector chips):  -----
+[INFO    ] 
+[INFO    ]    *   Image:   'iab901eiq_flt.fits['SCI',1]'  --  SKY = 43.05081843483068 (brightness units)
+[INFO    ]        Sky change (data units):
+[INFO    ]       - EXT = 'SCI',1   delta(MDRIZSKY) = 0.708103   NEW MDRIZSKY = 0.708103
+[INFO    ] ***** skymatch ended on 2020-08-20 13:38:13.543780
+[INFO    ] TOTAL RUN TIME: 0:00:00.101186
+[INFO    ] ==== Processing Step Subtract Sky finished at 13:38:13.562 (20/08/2020)
+[INFO    ] ==== Processing Step  Separate Drizzle  started at  13:38:13.563 (20/08/2020)
+[INFO    ] 
+[INFO    ] Interpreted paramDict with single=True as:
+{'build': True, 'stepsize': 10, 'coeffs': True, 'wcskey': '', 'kernel': 'turbo', 'wt_scl': 'exptime', 'pixfrac': 1.0, 'fillval': None, 'bits': 0, 'compress': False, 'units': 'cps'}
+[INFO    ] USER INPUT PARAMETERS for Separate Drizzle Step:
+[INFO    ] 	bits :	0
+[INFO    ] 	build :	False
+[INFO    ] 	clean :	True
+[INFO    ] 	coeffs :	True
+[INFO    ] 	compress :	False
+[INFO    ] 	crbit :	None
+[INFO    ] 	fillval :	None
+[INFO    ] 	kernel :	turbo
+[INFO    ] 	num_cores :	None
+[INFO    ] 	pixfrac :	1.0
+[INFO    ] 	proc_unit :	electrons
+[INFO    ] 	stepsize :	10
+[INFO    ] 	units :	cps
+[INFO    ] 	wcskey :	
+[INFO    ] 	wht_type :	None
+[INFO    ] 	wt_scl :	exptime
+[INFO    ]   **Using sub-sampling value of 10 for kernel turbo
+[INFO    ] Running Drizzle to create output frame with WCS of: 
+[INFO    ] WCS Keywords
+[INFO    ] 
+[INFO    ] Number of WCS axes: 2
+[INFO    ] CTYPE : 'RA---TAN'  'DEC--TAN'  
+[INFO    ] CRVAL : 194.25530306906586  22.026327826928597  
+[INFO    ] CRPIX : 542.0  479.5  
+[INFO    ] CD1_1 CD1_2  : -2.8086760251999103e-05  -2.191516781069986e-05  
+[INFO    ] CD2_1 CD2_2  : -2.191516781069986e-05  2.8086760251999103e-05  
+[INFO    ] NAXIS : 1084  959
+[INFO    ] Executing serially
+[INFO    ] -Drizzle input: /Users/kbhirombhakdi/_work/_data/11552/G102_set/mastDownload/HST/iab901eiq/iab901eiq_flt.fits[sci,1]
+[INFO    ] Applying sky value of 0.708103 to /Users/kbhirombhakdi/_work/_data/11552/G102_set/mastDownload/HST/iab901eiq/iab901eiq_flt.fits[sci,1]
+[INFO    ] Using WCSLIB-based coordinate transformation...
+[INFO    ] stepsize = 10
+[INFO    ] -Drizzling using kernel = turbo
+
+[INFO    ] -Generating simple FITS output: /Users/kbhirombhakdi/_work/_data/11552/G102_set/mastDownload/HST/iab901eiq/iab901eiq_single_sci.fits
+[WARNING ] /Users/kbhirombhakdi/anaconda3/envs/py3/lib/python3.7/site-packages/astropy/io/fits/card.py:1003: VerifyWarning: Card is too long, comment will be truncated.
+  VerifyWarning)
+
+[INFO    ] Writing out image to disk: /Users/kbhirombhakdi/_work/_data/11552/G102_set/mastDownload/HST/iab901eiq/iab901eiq_single_sci.fits
+[INFO    ] Writing out image to disk: /Users/kbhirombhakdi/_work/_data/11552/G102_set/mastDownload/HST/iab901eiq/iab901eiq_single_wht.fits
+[INFO    ] ==== Processing Step Separate Drizzle finished at 13:38:13.907 (20/08/2020)
+[INFO    ] ==== Processing Step  Create Median  started at  13:38:13.908 (20/08/2020)
+[INFO    ] 
+[INFO    ] USER INPUT PARAMETERS for Create Median Step:
+[INFO    ] 	combine_bufsize :	None
+[INFO    ] 	combine_grow :	1
+[INFO    ] 	combine_hthresh :	None
+[INFO    ] 	combine_lthresh :	None
+[INFO    ] 	combine_maskpt :	0.3
+[INFO    ] 	combine_nhigh :	0
+[INFO    ] 	combine_nlow :	0
+[INFO    ] 	combine_nsigma :	4 3
+[INFO    ] 	combine_type :	mean
+[INFO    ] 	compress :	False
+[INFO    ] 	median :	True
+[INFO    ] 	median_newmasks :	True
+[INFO    ] 	proc_unit :	native
+[INFO    ] reference sky value for image '/Users/kbhirombhakdi/_work/_data/11552/G102_set/mastDownload/HST/iab901eiq/iab901eiq_flt.fits' is 4.1527256676065925
+[INFO    ] Saving output median image to: 'iab901eiq_med.fits'
+[INFO    ] ==== Processing Step Create Median finished at 13:38:14.088 (20/08/2020)
+[INFO    ] ==== Processing Step  Blot  started at  13:38:14.089 (20/08/2020)
+[INFO    ] 
+[INFO    ] USER INPUT PARAMETERS for Blot Step:
+[INFO    ] 	blot_addsky :	True
+[INFO    ] 	blot_interp :	poly5
+[INFO    ] 	blot_sinscl :	1.0
+[INFO    ] 	blot_skyval :	0.0
+[INFO    ] 	coeffs :	True
+[INFO    ]     Blot: creating blotted image:  /Users/kbhirombhakdi/_work/_data/11552/G102_set/mastDownload/HST/iab901eiq/iab901eiq_flt.fits[sci,1]
+[INFO    ] Using default C-based coordinate transformation...
+[INFO    ] Applying sky value of 0.708103 to blotted image /Users/kbhirombhakdi/_work/_data/11552/G102_set/mastDownload/HST/iab901eiq/iab901eiq_flt.fits[sci,1]
+[INFO    ] -Generating simple FITS output: /Users/kbhirombhakdi/_work/_data/11552/G102_set/mastDownload/HST/iab901eiq/iab901eiq_sci1_blt.fits
+[INFO    ] Writing out image to disk: /Users/kbhirombhakdi/_work/_data/11552/G102_set/mastDownload/HST/iab901eiq/iab901eiq_sci1_blt.fits
+[INFO    ] ==== Processing Step Blot finished at 13:38:14.465 (20/08/2020)
+[INFO    ] ==== Processing Step  Driz_CR  started at  13:38:14.466 (20/08/2020)
+[INFO    ] 
+[INFO    ] USER INPUT PARAMETERS for Driz_CR Step:
+[INFO    ] 	crbit :	4096
+[INFO    ] 	driz_cr :	True
+[INFO    ] 	driz_cr_corr :	False
+[INFO    ] 	driz_cr_ctegrow :	0
+[INFO    ] 	driz_cr_grow :	1
+[INFO    ] 	driz_cr_scale :	1.2 0.7
+[INFO    ] 	driz_cr_snr :	3.5 3.0
+[INFO    ] 	inmemory :	False
+[INFO    ] Executing serially
+[INFO    ] Creating output: /Users/kbhirombhakdi/_work/_data/11552/G102_set/mastDownload/HST/iab901eiq/iab901eiq_sci1_crmask.fits
+[INFO    ] ==== Processing Step Driz_CR finished at 13:38:14.672 (20/08/2020)
+[INFO    ] ==== Processing Step  Final Drizzle  started at  13:38:14.674 (20/08/2020)
+[INFO    ] 
+[INFO    ] Interpreted paramDict with single=False as:
+{'build': True, 'stepsize': 10, 'coeffs': True, 'wcskey': '', 'wht_type': 'EXP', 'kernel': 'square', 'wt_scl': 'exptime', 'pixfrac': 1.0, 'fillval': None, 'maskval': None, 'bits': 0, 'units': 'cps'}
+[INFO    ] USER INPUT PARAMETERS for Final Drizzle Step:
+[INFO    ] 	bits :	0
+[INFO    ] 	build :	True
+[INFO    ] 	clean :	True
+[INFO    ] 	coeffs :	True
+[INFO    ] 	crbit :	4096
+[INFO    ] 	fillval :	None
+[INFO    ] 	kernel :	square
+[INFO    ] 	maskval :	None
+[INFO    ] 	pixfrac :	1.0
+[INFO    ] 	proc_unit :	native
+[INFO    ] 	stepsize :	10
+[INFO    ] 	units :	cps
+[INFO    ] 	wcskey :	
+[INFO    ] 	wht_type :	EXP
+[INFO    ] 	wt_scl :	exptime
+[INFO    ]   **Using sub-sampling value of 10 for kernel square
+[INFO    ] Running Drizzle to create output frame with WCS of: 
+[INFO    ] WCS Keywords
+[INFO    ] 
+[INFO    ] Number of WCS axes: 2
+[INFO    ] CTYPE : 'RA---TAN'  'DEC--TAN'  
+[INFO    ] CRVAL : 194.25530306906586  22.026327826928597  
+[INFO    ] CRPIX : 542.0  479.5  
+[INFO    ] CD1_1 CD1_2  : -2.8086760251999103e-05  -2.191516781069986e-05  
+[INFO    ] CD2_1 CD2_2  : -2.191516781069986e-05  2.8086760251999103e-05  
+[INFO    ] NAXIS : 1084  959
+[INFO    ] -Drizzle input: /Users/kbhirombhakdi/_work/_data/11552/G102_set/mastDownload/HST/iab901eiq/iab901eiq_flt.fits[sci,1]
+[INFO    ] Applying sky value of 0.708103 to /Users/kbhirombhakdi/_work/_data/11552/G102_set/mastDownload/HST/iab901eiq/iab901eiq_flt.fits[sci,1]
+[INFO    ] Applying EXPTIME weighting to DQ mask for chip 1
+[INFO    ] Using WCSLIB-based coordinate transformation...
+[INFO    ] stepsize = 10
+[INFO    ] -Drizzling using kernel = square
+
+[INFO    ] -Generating multi-extension output file:  iab901eiq_drz.fits
+[INFO    ] Writing out to disk: iab901eiq_drz.fits
+[WARNING ] /Users/kbhirombhakdi/anaconda3/envs/py3/lib/python3.7/site-packages/astropy/io/fits/card.py:1003: VerifyWarning: Card is too long, comment will be truncated.
+  VerifyWarning)
+
+[INFO    ] ==== Processing Step Final Drizzle finished at 13:38:15.599 (20/08/2020)
+[INFO    ] 
+[INFO    ] AstroDrizzle Version 3.1.6 is finished processing at 13:38:15.601 (20/08/2020).
+[INFO    ] 
+[INFO    ] 
+[INFO    ] 
+[INFO    ]    --------------------          --------------------
+[INFO    ]                    Step          Elapsed time
+[INFO    ]    --------------------          --------------------
+[INFO    ] 
+[INFO    ]          Initialization          0.1584 sec.
+[INFO    ]             Static Mask          0.0440 sec.
+[INFO    ]            Subtract Sky          0.1410 sec.
+[INFO    ]        Separate Drizzle          0.3439 sec.
+[INFO    ]           Create Median          0.1793 sec.
+[INFO    ]                    Blot          0.3759 sec.
+[INFO    ]                 Driz_CR          0.2058 sec.
+[INFO    ]           Final Drizzle          0.9255 sec.
+[INFO    ]    ====================          ====================
+[INFO    ]                   Total          2.3738 sec.
+[INFO    ] 
+[INFO    ] Removing intermediate files for /Users/kbhirombhakdi/_work/_data/11552/G102_set/mastDownload/HST/iab901eiq/iab901eiq_flt.fits
+[INFO    ] Trailer file written to:  astrodrizzle.log
+[INFO    ] Setting up logfile :  astrodrizzle.log
+[INFO    ] AstroDrizzle Version 3.1.6 (2020-02-19 16:16:30 -0500) started at: 13:38:15.652 (20/08/2020)
+[INFO    ] 
+[INFO    ] Version Information
+[INFO    ] --------------------
+[INFO    ] Python Version [Clang 9.0.1 ]
+[INFO    ] 3.7.6 | packaged by conda-forge | (default, Jun  1 2020, 18:33:30) 
+[INFO    ] numpy Version -> 1.18.5 
+[INFO    ] astropy Version -> 4.0.1.post1 
+[INFO    ] stwcs Version -> 1.5.3 
+[INFO    ] ==== Processing Step  Initialization  started at  13:38:15.655 (20/08/2020)
+[INFO    ] 
+[INFO    ] Executing serially
+[INFO    ] Setting up output name: iab9a1ewq_drz.fits
+[INFO    ] -Creating imageObject List as input for processing steps.
+[INFO    ] Reading in MDRIZSKY of 0.7251947522163391
+[INFO    ] Reset bit values of 4096 to a value of 0 in /Users/kbhirombhakdi/_work/_data/11552/G102_set/mastDownload/HST/iab9a1ewq/iab9a1ewq_flt.fits[DQ,1]
+[INFO    ] -Creating output WCS.
+[INFO    ] WCS Keywords
+[INFO    ] 
+[INFO    ] Number of WCS axes: 2
+[INFO    ] CTYPE : 'RA---TAN'  'DEC--TAN'  
+[INFO    ] CRVAL : 194.25654640588985  22.011348729550484  
+[INFO    ] CRPIX : 542.0  479.5  
+[INFO    ] CD1_1 CD1_2  : -2.808492761172112e-05  -2.1917516343527532e-05  
+[INFO    ] CD2_1 CD2_2  : -2.1917516343527532e-05  2.808492761172112e-05  
+[INFO    ] NAXIS : 1084  959
+[INFO    ] ********************************************************************************
+[INFO    ] *
+[INFO    ] *  Estimated memory usage:  up to 19 Mb.
+[INFO    ] *  Output image size:       1084 X 959 pixels. 
+[INFO    ] *  Output image file:       ~ 11 Mb. 
+[INFO    ] *  Cores available:         1
+[INFO    ] *
+[INFO    ] ********************************************************************************
+[INFO    ] ==== Processing Step Initialization finished at 13:38:15.83 (20/08/2020)
+[INFO    ] USER INPUT PARAMETERS common to all Processing Steps:
+[INFO    ] 	build :	True
+[INFO    ] 	coeffs :	True
+[INFO    ] 	context :	True
+[INFO    ] 	crbit :	4096
+[INFO    ] 	group :	
+[INFO    ] 	in_memory :	False
+[INFO    ] 	input :	/Users/kbhirombhakdi/_work/_data/11552/G102_set/mastDownload/HST/iab9a1ewq/iab9a1ewq_flt.fits
+[INFO    ] 	mdriztab :	False
+[INFO    ] 	num_cores :	None
+[INFO    ] 	output :	iab9a1ewq
+[INFO    ] 	proc_unit :	native
+[INFO    ] 	resetbits :	4096
+[INFO    ] 	runfile :	astrodrizzle.log
+[INFO    ] 	stepsize :	10
+[INFO    ] 	updatewcs :	False
+[INFO    ] 	wcskey :	
+[INFO    ] ==== Processing Step  Static Mask  started at  13:38:15.834 (20/08/2020)
+[INFO    ] 
+[INFO    ] USER INPUT PARAMETERS for Static Mask Step:
+[INFO    ] 	static :	True
+[INFO    ] 	static_sig :	4.0
+[INFO    ] Computing static mask:
+
+[INFO    ]   mode =  0.049217;   rms = 7.179668;   static_sig = 4.00
+[INFO    ] Saving static mask to disk: ./WFC3IR_1014x1014_1_staticMask.fits
+[INFO    ] ==== Processing Step Static Mask finished at 13:38:15.877 (20/08/2020)
+[INFO    ] ==== Processing Step  Subtract Sky  started at  13:38:15.878 (20/08/2020)
+[INFO    ] 
+[INFO    ] USER INPUT PARAMETERS for Sky Subtraction Step:
+[INFO    ] 	sky_bits :	0
+[INFO    ] 	skyclip :	5
+[INFO    ] 	skyfile :	
+[INFO    ] 	skylower :	None
+[INFO    ] 	skylsigma :	4.0
+[INFO    ] 	skymask_cat :	
+[INFO    ] 	skymethod :	localmin
+[INFO    ] 	skystat :	median
+[INFO    ] 	skysub :	True
+[INFO    ] 	skyupper :	None
+[INFO    ] 	skyuser :	
+[INFO    ] 	skyusigma :	4.0
+[INFO    ] 	skywidth :	0.1
+[INFO    ] 	use_static :	True
+[INFO    ] ***** skymatch started on 2020-08-20 13:38:15.898840
+[INFO    ]       Version 1.0.5
+[INFO    ] 
+[INFO    ] 'skymatch' task will apply computed sky differences to input image file(s).
+[INFO    ] 
+[INFO    ] NOTE: Computed sky values WILL NOT be subtracted from image data ('subtractsky'=False).
+[INFO    ] 'MDRIZSKY' header keyword will represent sky value *computed* from data.
+[INFO    ] 
+[INFO    ] -----  User specified keywords:  -----
+[INFO    ]        Sky Value Keyword:  'MDRIZSKY'
+[INFO    ]        Data Units Keyword: 'BUNIT'
+[INFO    ] 
+[INFO    ] 
+[INFO    ] -----  Input file list:  -----
+[INFO    ] 
+[INFO    ]    **  Input image: 'iab9a1ewq_flt.fits'
+[INFO    ]        EXT: 'SCI',1;	MASK: iab9a1ewq_skymatch_mask_sci1.fits[0]
+[INFO    ] 
+[INFO    ] -----  Sky statistics parameters:  -----
+[INFO    ]        statistics function: 'median'
+[INFO    ]        lower = None
+[INFO    ]        upper = None
+[INFO    ]        nclip = 5
+[INFO    ]        lsigma = 4.0
+[INFO    ]        usigma = 4.0
+[INFO    ]        binwidth = 0.1
+[INFO    ] 
+[INFO    ] -----  Data->Brightness conversion parameters for input files:  -----
+[INFO    ] 
+[INFO    ]    *   Image: iab9a1ewq_flt.fits
+[INFO    ]        EXT = 'SCI',1
+[INFO    ]              Data units type: COUNT-RATE
+[INFO    ]              Conversion factor (data->brightness):  60.797431635711504
+[INFO    ] 
+[INFO    ] 
+[INFO    ] -----  Computing sky values requested image extensions (detector chips):  -----
+[INFO    ] 
+[INFO    ]    *   Image:   'iab9a1ewq_flt.fits['SCI',1]'  --  SKY = 44.08997837044962 (brightness units)
+[INFO    ]        Sky change (data units):
+[INFO    ]       - EXT = 'SCI',1   delta(MDRIZSKY) = 0.725195   NEW MDRIZSKY = 0.725195
+[INFO    ] ***** skymatch ended on 2020-08-20 13:38:16.002518
+[INFO    ] TOTAL RUN TIME: 0:00:00.103678
+[INFO    ] ==== Processing Step Subtract Sky finished at 13:38:16.022 (20/08/2020)
+[INFO    ] ==== Processing Step  Separate Drizzle  started at  13:38:16.024 (20/08/2020)
+[INFO    ] 
+[INFO    ] Interpreted paramDict with single=True as:
+{'build': True, 'stepsize': 10, 'coeffs': True, 'wcskey': '', 'kernel': 'turbo', 'wt_scl': 'exptime', 'pixfrac': 1.0, 'fillval': None, 'bits': 0, 'compress': False, 'units': 'cps'}
+[INFO    ] USER INPUT PARAMETERS for Separate Drizzle Step:
+[INFO    ] 	bits :	0
+[INFO    ] 	build :	False
+[INFO    ] 	clean :	True
+[INFO    ] 	coeffs :	True
+[INFO    ] 	compress :	False
+[INFO    ] 	crbit :	None
+[INFO    ] 	fillval :	None
+[INFO    ] 	kernel :	turbo
+[INFO    ] 	num_cores :	None
+[INFO    ] 	pixfrac :	1.0
+[INFO    ] 	proc_unit :	electrons
+[INFO    ] 	stepsize :	10
+[INFO    ] 	units :	cps
+[INFO    ] 	wcskey :	
+[INFO    ] 	wht_type :	None
+[INFO    ] 	wt_scl :	exptime
+[INFO    ]   **Using sub-sampling value of 10 for kernel turbo
+[INFO    ] Running Drizzle to create output frame with WCS of: 
+[INFO    ] WCS Keywords
+[INFO    ] 
+[INFO    ] Number of WCS axes: 2
+[INFO    ] CTYPE : 'RA---TAN'  'DEC--TAN'  
+[INFO    ] CRVAL : 194.25654640588985  22.011348729550484  
+[INFO    ] CRPIX : 542.0  479.5  
+[INFO    ] CD1_1 CD1_2  : -2.808492761172112e-05  -2.1917516343527532e-05  
+[INFO    ] CD2_1 CD2_2  : -2.1917516343527532e-05  2.808492761172112e-05  
+[INFO    ] NAXIS : 1084  959
+[INFO    ] Executing serially
+[INFO    ] -Drizzle input: /Users/kbhirombhakdi/_work/_data/11552/G102_set/mastDownload/HST/iab9a1ewq/iab9a1ewq_flt.fits[sci,1]
+[INFO    ] Applying sky value of 0.725195 to /Users/kbhirombhakdi/_work/_data/11552/G102_set/mastDownload/HST/iab9a1ewq/iab9a1ewq_flt.fits[sci,1]
+[INFO    ] Using WCSLIB-based coordinate transformation...
+[INFO    ] stepsize = 10
+[INFO    ] -Drizzling using kernel = turbo
+
+[INFO    ] -Generating simple FITS output: /Users/kbhirombhakdi/_work/_data/11552/G102_set/mastDownload/HST/iab9a1ewq/iab9a1ewq_single_sci.fits
+[WARNING ] /Users/kbhirombhakdi/anaconda3/envs/py3/lib/python3.7/site-packages/astropy/io/fits/card.py:1003: VerifyWarning: Card is too long, comment will be truncated.
+  VerifyWarning)
+
+[INFO    ] Writing out image to disk: /Users/kbhirombhakdi/_work/_data/11552/G102_set/mastDownload/HST/iab9a1ewq/iab9a1ewq_single_sci.fits
+[INFO    ] Writing out image to disk: /Users/kbhirombhakdi/_work/_data/11552/G102_set/mastDownload/HST/iab9a1ewq/iab9a1ewq_single_wht.fits
+[INFO    ] ==== Processing Step Separate Drizzle finished at 13:38:16.36 (20/08/2020)
+[INFO    ] ==== Processing Step  Create Median  started at  13:38:16.363 (20/08/2020)
+[INFO    ] 
+[INFO    ] USER INPUT PARAMETERS for Create Median Step:
+[INFO    ] 	combine_bufsize :	None
+[INFO    ] 	combine_grow :	1
+[INFO    ] 	combine_hthresh :	None
+[INFO    ] 	combine_lthresh :	None
+[INFO    ] 	combine_maskpt :	0.3
+[INFO    ] 	combine_nhigh :	0
+[INFO    ] 	combine_nlow :	0
+[INFO    ] 	combine_nsigma :	4 3
+[INFO    ] 	combine_type :	mean
+[INFO    ] 	compress :	False
+[INFO    ] 	median :	True
+[INFO    ] 	median_newmasks :	True
+[INFO    ] 	proc_unit :	native
+[INFO    ] reference sky value for image '/Users/kbhirombhakdi/_work/_data/11552/G102_set/mastDownload/HST/iab9a1ewq/iab9a1ewq_flt.fits' is 4.252964090342402
+[INFO    ] Saving output median image to: 'iab9a1ewq_med.fits'
+[INFO    ] ==== Processing Step Create Median finished at 13:38:16.540 (20/08/2020)
+[INFO    ] ==== Processing Step  Blot  started at  13:38:16.542 (20/08/2020)
+[INFO    ] 
+[INFO    ] USER INPUT PARAMETERS for Blot Step:
+[INFO    ] 	blot_addsky :	True
+[INFO    ] 	blot_interp :	poly5
+[INFO    ] 	blot_sinscl :	1.0
+[INFO    ] 	blot_skyval :	0.0
+[INFO    ] 	coeffs :	True
+[INFO    ]     Blot: creating blotted image:  /Users/kbhirombhakdi/_work/_data/11552/G102_set/mastDownload/HST/iab9a1ewq/iab9a1ewq_flt.fits[sci,1]
+[INFO    ] Using default C-based coordinate transformation...
+[INFO    ] Applying sky value of 0.725195 to blotted image /Users/kbhirombhakdi/_work/_data/11552/G102_set/mastDownload/HST/iab9a1ewq/iab9a1ewq_flt.fits[sci,1]
+[INFO    ] -Generating simple FITS output: /Users/kbhirombhakdi/_work/_data/11552/G102_set/mastDownload/HST/iab9a1ewq/iab9a1ewq_sci1_blt.fits
+[INFO    ] Writing out image to disk: /Users/kbhirombhakdi/_work/_data/11552/G102_set/mastDownload/HST/iab9a1ewq/iab9a1ewq_sci1_blt.fits
+[INFO    ] ==== Processing Step Blot finished at 13:38:16.860 (20/08/2020)
+[INFO    ] ==== Processing Step  Driz_CR  started at  13:38:16.861 (20/08/2020)
+[INFO    ] 
+[INFO    ] USER INPUT PARAMETERS for Driz_CR Step:
+[INFO    ] 	crbit :	4096
+[INFO    ] 	driz_cr :	True
+[INFO    ] 	driz_cr_corr :	False
+[INFO    ] 	driz_cr_ctegrow :	0
+[INFO    ] 	driz_cr_grow :	1
+[INFO    ] 	driz_cr_scale :	1.2 0.7
+[INFO    ] 	driz_cr_snr :	3.5 3.0
+[INFO    ] 	inmemory :	False
+[INFO    ] Executing serially
+[INFO    ] Creating output: /Users/kbhirombhakdi/_work/_data/11552/G102_set/mastDownload/HST/iab9a1ewq/iab9a1ewq_sci1_crmask.fits
+[INFO    ] ==== Processing Step Driz_CR finished at 13:38:17.052 (20/08/2020)
+[INFO    ] ==== Processing Step  Final Drizzle  started at  13:38:17.053 (20/08/2020)
+[INFO    ] 
+[INFO    ] Interpreted paramDict with single=False as:
+{'build': True, 'stepsize': 10, 'coeffs': True, 'wcskey': '', 'wht_type': 'EXP', 'kernel': 'square', 'wt_scl': 'exptime', 'pixfrac': 1.0, 'fillval': None, 'maskval': None, 'bits': 0, 'units': 'cps'}
+[INFO    ] USER INPUT PARAMETERS for Final Drizzle Step:
+[INFO    ] 	bits :	0
+[INFO    ] 	build :	True
+[INFO    ] 	clean :	True
+[INFO    ] 	coeffs :	True
+[INFO    ] 	crbit :	4096
+[INFO    ] 	fillval :	None
+[INFO    ] 	kernel :	square
+[INFO    ] 	maskval :	None
+[INFO    ] 	pixfrac :	1.0
+[INFO    ] 	proc_unit :	native
+[INFO    ] 	stepsize :	10
+[INFO    ] 	units :	cps
+[INFO    ] 	wcskey :	
+[INFO    ] 	wht_type :	EXP
+[INFO    ] 	wt_scl :	exptime
+[INFO    ]   **Using sub-sampling value of 10 for kernel square
+[INFO    ] Running Drizzle to create output frame with WCS of: 
+[INFO    ] WCS Keywords
+[INFO    ] 
+[INFO    ] Number of WCS axes: 2
+[INFO    ] CTYPE : 'RA---TAN'  'DEC--TAN'  
+[INFO    ] CRVAL : 194.25654640588985  22.011348729550484  
+[INFO    ] CRPIX : 542.0  479.5  
+[INFO    ] CD1_1 CD1_2  : -2.808492761172112e-05  -2.1917516343527532e-05  
+[INFO    ] CD2_1 CD2_2  : -2.1917516343527532e-05  2.808492761172112e-05  
+[INFO    ] NAXIS : 1084  959
+[INFO    ] -Drizzle input: /Users/kbhirombhakdi/_work/_data/11552/G102_set/mastDownload/HST/iab9a1ewq/iab9a1ewq_flt.fits[sci,1]
+[INFO    ] Applying sky value of 0.725195 to /Users/kbhirombhakdi/_work/_data/11552/G102_set/mastDownload/HST/iab9a1ewq/iab9a1ewq_flt.fits[sci,1]
+[INFO    ] Applying EXPTIME weighting to DQ mask for chip 1
+[INFO    ] Using WCSLIB-based coordinate transformation...
+[INFO    ] stepsize = 10
+[INFO    ] -Drizzling using kernel = square
+
+[INFO    ] -Generating multi-extension output file:  iab9a1ewq_drz.fits
+[INFO    ] Writing out to disk: iab9a1ewq_drz.fits
+[WARNING ] /Users/kbhirombhakdi/anaconda3/envs/py3/lib/python3.7/site-packages/astropy/io/fits/card.py:1003: VerifyWarning: Card is too long, comment will be truncated.
+  VerifyWarning)
+
+[INFO    ] ==== Processing Step Final Drizzle finished at 13:38:18.044 (20/08/2020)
+[INFO    ] 
+[INFO    ] AstroDrizzle Version 3.1.6 is finished processing at 13:38:18.046 (20/08/2020).
+[INFO    ] 
+[INFO    ] 
+[INFO    ] 
+[INFO    ]    --------------------          --------------------
+[INFO    ]                    Step          Elapsed time
+[INFO    ]    --------------------          --------------------
+[INFO    ] 
+[INFO    ]          Initialization          0.1767 sec.
+[INFO    ]             Static Mask          0.0432 sec.
+[INFO    ]            Subtract Sky          0.1442 sec.
+[INFO    ]        Separate Drizzle          0.3379 sec.
+[INFO    ]           Create Median          0.1776 sec.
+[INFO    ]                    Blot          0.3184 sec.
+[INFO    ]                 Driz_CR          0.1902 sec.
+[INFO    ]           Final Drizzle          0.9914 sec.
+[INFO    ]    ====================          ====================
+[INFO    ]                   Total          2.3796 sec.
+[INFO    ] 
+[INFO    ] Removing intermediate files for /Users/kbhirombhakdi/_work/_data/11552/G102_set/mastDownload/HST/iab9a1ewq/iab9a1ewq_flt.fits
+[INFO    ] Trailer file written to:  astrodrizzle.log
