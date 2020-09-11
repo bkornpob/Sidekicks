@@ -1,0 +1,532 @@
+[INFO    ] Setting up logfile :  astrodrizzle.log
+[INFO    ] AstroDrizzle Version 3.1.6 (2020-02-19 16:16:30 -0500) started at: 15:50:28.82 (21/08/2020)
+[INFO    ] 
+[INFO    ] Version Information
+[INFO    ] --------------------
+[INFO    ] Python Version [Clang 9.0.1 ]
+[INFO    ] 3.7.6 | packaged by conda-forge | (default, Jun  1 2020, 18:33:30) 
+[INFO    ] numpy Version -> 1.18.5 
+[INFO    ] astropy Version -> 4.0.1.post1 
+[INFO    ] stwcs Version -> 1.5.3 
+[INFO    ] ==== Processing Step  Initialization  started at  15:50:28.830 (21/08/2020)
+[INFO    ] 
+[INFO    ] Executing serially
+[INFO    ] Setting up output name: X01_201911_G102_drz.fits
+[INFO    ] -Creating imageObject List as input for processing steps.
+[INFO    ] Reading in MDRIZSKY of 0.01926310413624554
+[INFO    ] Reading in MDRIZSKY of 0.0130179639688431
+[INFO    ] Reading in MDRIZSKY of 0.005274131428303844
+[INFO    ] Reading in MDRIZSKY of 0.0
+[INFO    ] Reading in MDRIZSKY of 0.01318720235248696
+[INFO    ] Reading in MDRIZSKY of 0.01211213719911524
+[INFO    ] Reset bit values of 4096 to a value of 0 in /Users/kbhirombhakdi/_work/Sidekicks/20200821/idwbk3z1q_X01_201911_G102/idwbk3z1q_flt.fits[DQ,1]
+[INFO    ] Reset bit values of 4096 to a value of 0 in /Users/kbhirombhakdi/_work/Sidekicks/20200821/idwbk3z7q_X01_201911_G102/idwbk3z7q_flt.fits[DQ,1]
+[INFO    ] Reset bit values of 4096 to a value of 0 in /Users/kbhirombhakdi/_work/Sidekicks/20200821/idwbk3z4q_X01_201911_G102/idwbk3z4q_flt.fits[DQ,1]
+[INFO    ] Reset bit values of 4096 to a value of 0 in /Users/kbhirombhakdi/_work/Sidekicks/20200821/idwbk3zaq_X01_201911_G102/idwbk3zaq_flt.fits[DQ,1]
+[INFO    ] Reset bit values of 4096 to a value of 0 in /Users/kbhirombhakdi/_work/Sidekicks/20200821/idwbk3z9q_X01_201911_G102/idwbk3z9q_flt.fits[DQ,1]
+[INFO    ] Reset bit values of 4096 to a value of 0 in /Users/kbhirombhakdi/_work/Sidekicks/20200821/idwbk3z3q_X01_201911_G102/idwbk3z3q_flt.fits[DQ,1]
+[INFO    ] -Creating output WCS.
+[INFO    ] Creating OUTPUT WCS from ./idwbk3z1q_X01_201911_G102/idwbk3z1q_flt.fits[1]
+[INFO    ] WCS Keywords
+[INFO    ] 
+[INFO    ] CD_11  CD_12: -1.8535123636411e-06 -3.356517570308e-05
+[INFO    ] CD_21  CD_22: -3.7573078339169e-05 1.5432356282565e-06
+[INFO    ] CRVAL    : 44.535928876384 -8.9662964459753
+[INFO    ] CRPIX    : 507.0 507.0
+[INFO    ] NAXIS    : 1014 1014
+[INFO    ] Plate Scale : 0.13542756566728567
+[INFO    ] ORIENTAT : -87.36754952931922
+[INFO    ] ********************************************************************************
+[INFO    ] *
+[INFO    ] *  Estimated memory usage:  up to 117 Mb.
+[INFO    ] *  Output image size:       1014 X 1014 pixels. 
+[INFO    ] *  Output image file:       ~ 11 Mb. 
+[INFO    ] *  Cores available:         6
+[INFO    ] *
+[INFO    ] ********************************************************************************
+[INFO    ] ==== Processing Step Initialization finished at 15:50:29.809 (21/08/2020)
+[INFO    ] USER INPUT PARAMETERS common to all Processing Steps:
+[INFO    ] 	build :	True
+[INFO    ] 	coeffs :	True
+[INFO    ] 	context :	True
+[INFO    ] 	crbit :	4096
+[INFO    ] 	group :	
+[INFO    ] 	in_memory :	False
+[INFO    ] 	input :	['./idwbk3z1q_X01_201911_G102/idwbk3z1q_flt.fits', './idwbk3z7q_X01_201911_G102/idwbk3z7q_flt.fits', './idwbk3z4q_X01_201911_G102/idwbk3z4q_flt.fits', './idwbk3zaq_X01_201911_G102/idwbk3zaq_flt.fits', './idwbk3z9q_X01_201911_G102/idwbk3z9q_flt.fits', './idwbk3z3q_X01_201911_G102/idwbk3z3q_flt.fits']
+[INFO    ] 	mdriztab :	False
+[INFO    ] 	num_cores :	None
+[INFO    ] 	output :	X01_201911_G102
+[INFO    ] 	proc_unit :	native
+[INFO    ] 	resetbits :	4096
+[INFO    ] 	runfile :	astrodrizzle.log
+[INFO    ] 	stepsize :	10
+[INFO    ] 	updatewcs :	False
+[INFO    ] 	wcskey :	
+[INFO    ] ==== Processing Step  Static Mask  started at  15:50:29.812 (21/08/2020)
+[INFO    ] 
+[INFO    ] Static Mask step not performed.
+[INFO    ] ==== Processing Step Static Mask finished at 15:50:29.815 (21/08/2020)
+[INFO    ] ==== Processing Step  Subtract Sky  started at  15:50:29.816 (21/08/2020)
+[INFO    ] 
+[INFO    ] USER INPUT PARAMETERS for Sky Subtraction Step:
+[INFO    ] 	sky_bits :	0
+[INFO    ] 	skyclip :	5
+[INFO    ] 	skyfile :	
+[INFO    ] 	skylower :	None
+[INFO    ] 	skylsigma :	4.0
+[INFO    ] 	skymask_cat :	
+[INFO    ] 	skymethod :	localmin
+[INFO    ] 	skystat :	median
+[INFO    ] 	skysub :	True
+[INFO    ] 	skyupper :	None
+[INFO    ] 	skyuser :	
+[INFO    ] 	skyusigma :	4.0
+[INFO    ] 	skywidth :	0.1
+[INFO    ] 	use_static :	True
+[WARNING ] Static mask for file '/Users/kbhirombhakdi/_work/Sidekicks/20200821/idwbk3z1q_X01_201911_G102/idwbk3z1q_flt.fits', ext=('SCI', 1) NOT FOUND.
+[WARNING ] Static mask for file '/Users/kbhirombhakdi/_work/Sidekicks/20200821/idwbk3z7q_X01_201911_G102/idwbk3z7q_flt.fits', ext=('SCI', 1) NOT FOUND.
+[WARNING ] Static mask for file '/Users/kbhirombhakdi/_work/Sidekicks/20200821/idwbk3z4q_X01_201911_G102/idwbk3z4q_flt.fits', ext=('SCI', 1) NOT FOUND.
+[WARNING ] Static mask for file '/Users/kbhirombhakdi/_work/Sidekicks/20200821/idwbk3zaq_X01_201911_G102/idwbk3zaq_flt.fits', ext=('SCI', 1) NOT FOUND.
+[WARNING ] Static mask for file '/Users/kbhirombhakdi/_work/Sidekicks/20200821/idwbk3z9q_X01_201911_G102/idwbk3z9q_flt.fits', ext=('SCI', 1) NOT FOUND.
+[WARNING ] Static mask for file '/Users/kbhirombhakdi/_work/Sidekicks/20200821/idwbk3z3q_X01_201911_G102/idwbk3z3q_flt.fits', ext=('SCI', 1) NOT FOUND.
+[INFO    ] ***** skymatch started on 2020-08-21 15:50:29.956270
+[INFO    ]       Version 1.0.5
+[INFO    ] 
+[INFO    ] 'skymatch' task will apply computed sky differences to input image file(s).
+[INFO    ] 
+[INFO    ] NOTE: Computed sky values WILL NOT be subtracted from image data ('subtractsky'=False).
+[INFO    ] 'MDRIZSKY' header keyword will represent sky value *computed* from data.
+[INFO    ] 
+[INFO    ] -----  User specified keywords:  -----
+[INFO    ]        Sky Value Keyword:  'MDRIZSKY'
+[INFO    ]        Data Units Keyword: 'BUNIT'
+[INFO    ] 
+[INFO    ] 
+[INFO    ] -----  Input file list:  -----
+[INFO    ] 
+[INFO    ]    **  Input image: 'idwbk3z1q_flt.fits'
+[INFO    ]        EXT: 'SCI',1;	MASK: idwbk3z1q_skymatch_mask_sci1.fits[0]
+[INFO    ] 
+[INFO    ]    **  Input image: 'idwbk3z7q_flt.fits'
+[INFO    ]        EXT: 'SCI',1;	MASK: idwbk3z7q_skymatch_mask_sci1.fits[0]
+[INFO    ] 
+[INFO    ]    **  Input image: 'idwbk3z4q_flt.fits'
+[INFO    ]        EXT: 'SCI',1;	MASK: idwbk3z4q_skymatch_mask_sci1.fits[0]
+[INFO    ] 
+[INFO    ]    **  Input image: 'idwbk3zaq_flt.fits'
+[INFO    ]        EXT: 'SCI',1;	MASK: idwbk3zaq_skymatch_mask_sci1.fits[0]
+[INFO    ] 
+[INFO    ]    **  Input image: 'idwbk3z9q_flt.fits'
+[INFO    ]        EXT: 'SCI',1;	MASK: idwbk3z9q_skymatch_mask_sci1.fits[0]
+[INFO    ] 
+[INFO    ]    **  Input image: 'idwbk3z3q_flt.fits'
+[INFO    ]        EXT: 'SCI',1;	MASK: idwbk3z3q_skymatch_mask_sci1.fits[0]
+[INFO    ] 
+[INFO    ] -----  Sky statistics parameters:  -----
+[INFO    ]        statistics function: 'median'
+[INFO    ]        lower = None
+[INFO    ]        upper = None
+[INFO    ]        nclip = 5
+[INFO    ]        lsigma = 4.0
+[INFO    ]        usigma = 4.0
+[INFO    ]        binwidth = 0.1
+[INFO    ] 
+[INFO    ] -----  Data->Brightness conversion parameters for input files:  -----
+[INFO    ] 
+[INFO    ]    *   Image: idwbk3z1q_flt.fits
+[INFO    ]        EXT = 'SCI',1
+[INFO    ]              Data units type: COUNT-RATE
+[INFO    ]              Conversion factor (data->brightness):  60.797431635711504
+[INFO    ] 
+[INFO    ]    *   Image: idwbk3z7q_flt.fits
+[INFO    ]        EXT = 'SCI',1
+[INFO    ]              Data units type: COUNT-RATE
+[INFO    ]              Conversion factor (data->brightness):  60.797431635711504
+[INFO    ] 
+[INFO    ]    *   Image: idwbk3z4q_flt.fits
+[INFO    ]        EXT = 'SCI',1
+[INFO    ]              Data units type: COUNT-RATE
+[INFO    ]              Conversion factor (data->brightness):  60.797431635711504
+[INFO    ] 
+[INFO    ]    *   Image: idwbk3zaq_flt.fits
+[INFO    ]        EXT = 'SCI',1
+[INFO    ]              Data units type: COUNT-RATE
+[INFO    ]              Conversion factor (data->brightness):  60.797431635711504
+[INFO    ] 
+[INFO    ]    *   Image: idwbk3z9q_flt.fits
+[INFO    ]        EXT = 'SCI',1
+[INFO    ]              Data units type: COUNT-RATE
+[INFO    ]              Conversion factor (data->brightness):  60.797431635711504
+[INFO    ] 
+[INFO    ]    *   Image: idwbk3z3q_flt.fits
+[INFO    ]        EXT = 'SCI',1
+[INFO    ]              Data units type: COUNT-RATE
+[INFO    ]              Conversion factor (data->brightness):  60.797431635711504
+[INFO    ] 
+[INFO    ] 
+[INFO    ] -----  Computing sky values requested image extensions (detector chips):  -----
+[INFO    ] 
+[INFO    ]    *   Image:   'idwbk3z1q_flt.fits['SCI',1]'  --  SKY = 37.135775955143586 (brightness units)
+[INFO    ]        Sky change (data units):
+[INFO    ]       - EXT = 'SCI',1   delta(MDRIZSKY) = 0.610812   NEW MDRIZSKY = 0.610812
+[INFO    ]    *   Image:   'idwbk3z7q_flt.fits['SCI',1]'  --  SKY = 37.03942973686168 (brightness units)
+[INFO    ]        Sky change (data units):
+[INFO    ]       - EXT = 'SCI',1   delta(MDRIZSKY) = 0.609227   NEW MDRIZSKY = 0.609227
+[INFO    ]    *   Image:   'idwbk3z4q_flt.fits['SCI',1]'  --  SKY = 36.57559301585408 (brightness units)
+[INFO    ]        Sky change (data units):
+[INFO    ]       - EXT = 'SCI',1   delta(MDRIZSKY) = 0.601598   NEW MDRIZSKY = 0.601598
+[INFO    ]    *   Image:   'idwbk3zaq_flt.fits['SCI',1]'  --  SKY = 36.33208752506269 (brightness units)
+[INFO    ]        Sky change (data units):
+[INFO    ]       - EXT = 'SCI',1   delta(MDRIZSKY) = 0.597592   NEW MDRIZSKY = 0.597592
+[INFO    ]    *   Image:   'idwbk3z9q_flt.fits['SCI',1]'  --  SKY = 37.039538451141155 (brightness units)
+[INFO    ]        Sky change (data units):
+[INFO    ]       - EXT = 'SCI',1   delta(MDRIZSKY) = 0.609229   NEW MDRIZSKY = 0.609229
+[INFO    ]    *   Image:   'idwbk3z3q_flt.fits['SCI',1]'  --  SKY = 36.815601530655634 (brightness units)
+[INFO    ]        Sky change (data units):
+[INFO    ]       - EXT = 'SCI',1   delta(MDRIZSKY) = 0.605545   NEW MDRIZSKY = 0.605545
+[INFO    ] ***** skymatch ended on 2020-08-21 15:50:30.432464
+[INFO    ] TOTAL RUN TIME: 0:00:00.476194
+[INFO    ] ==== Processing Step Subtract Sky finished at 15:50:30.559 (21/08/2020)
+[INFO    ] ==== Processing Step  Separate Drizzle  started at  15:50:30.561 (21/08/2020)
+[INFO    ] 
+[INFO    ] Interpreted paramDict with single=True as:
+{'build': True, 'stepsize': 10, 'coeffs': True, 'wcskey': '', 'kernel': 'turbo', 'wt_scl': 'exptime', 'pixfrac': 1.0, 'fillval': None, 'bits': 0, 'compress': False, 'units': 'cps'}
+[INFO    ] USER INPUT PARAMETERS for Separate Drizzle Step:
+[INFO    ] 	bits :	0
+[INFO    ] 	build :	False
+[INFO    ] 	clean :	True
+[INFO    ] 	coeffs :	True
+[INFO    ] 	compress :	False
+[INFO    ] 	crbit :	None
+[INFO    ] 	fillval :	None
+[INFO    ] 	kernel :	turbo
+[INFO    ] 	num_cores :	None
+[INFO    ] 	pixfrac :	1.0
+[INFO    ] 	proc_unit :	electrons
+[INFO    ] 	stepsize :	10
+[INFO    ] 	units :	cps
+[INFO    ] 	wcskey :	
+[INFO    ] 	wht_type :	None
+[INFO    ] 	wt_scl :	exptime
+[INFO    ]   **Using sub-sampling value of 10 for kernel turbo
+[INFO    ] Running Drizzle to create output frame with WCS of: 
+[INFO    ] WCS Keywords
+[INFO    ] 
+[INFO    ] Number of WCS axes: 2
+[INFO    ] CTYPE : 'RA---TAN'  'DEC--TAN'  
+[INFO    ] CRVAL : 44.53601814868829  -8.965889915256938  
+[INFO    ] CRPIX : 556.5  490.5  
+[INFO    ] CD1_1 CD1_2  : -1.8652249942292312e-06  -3.557613831411884e-05  
+[INFO    ] CD2_1 CD2_2  : -3.557613831411884e-05  1.8652249942292312e-06  
+[INFO    ] NAXIS : 1113  981
+[INFO    ] Executing 6 parallel workers
+[INFO    ] -Drizzle input: /Users/kbhirombhakdi/_work/Sidekicks/20200821/idwbk3z1q_X01_201911_G102/idwbk3z1q_flt.fits[sci,1]
+[INFO    ] -Drizzle input: /Users/kbhirombhakdi/_work/Sidekicks/20200821/idwbk3z7q_X01_201911_G102/idwbk3z7q_flt.fits[sci,1]
+[INFO    ] -Drizzle input: /Users/kbhirombhakdi/_work/Sidekicks/20200821/idwbk3z4q_X01_201911_G102/idwbk3z4q_flt.fits[sci,1]
+[INFO    ] -Drizzle input: /Users/kbhirombhakdi/_work/Sidekicks/20200821/idwbk3zaq_X01_201911_G102/idwbk3zaq_flt.fits[sci,1]
+[INFO    ] -Drizzle input: /Users/kbhirombhakdi/_work/Sidekicks/20200821/idwbk3z9q_X01_201911_G102/idwbk3z9q_flt.fits[sci,1]
+[INFO    ] -Drizzle input: /Users/kbhirombhakdi/_work/Sidekicks/20200821/idwbk3z3q_X01_201911_G102/idwbk3z3q_flt.fits[sci,1]
+[INFO    ] Applying sky value of 0.610812 to /Users/kbhirombhakdi/_work/Sidekicks/20200821/idwbk3z1q_X01_201911_G102/idwbk3z1q_flt.fits[sci,1]
+[INFO    ] Applying sky value of 0.609227 to /Users/kbhirombhakdi/_work/Sidekicks/20200821/idwbk3z7q_X01_201911_G102/idwbk3z7q_flt.fits[sci,1]
+[INFO    ] Applying sky value of 0.601598 to /Users/kbhirombhakdi/_work/Sidekicks/20200821/idwbk3z4q_X01_201911_G102/idwbk3z4q_flt.fits[sci,1]
+[INFO    ] Applying sky value of 0.597592 to /Users/kbhirombhakdi/_work/Sidekicks/20200821/idwbk3zaq_X01_201911_G102/idwbk3zaq_flt.fits[sci,1]
+[INFO    ] Applying sky value of 0.609229 to /Users/kbhirombhakdi/_work/Sidekicks/20200821/idwbk3z9q_X01_201911_G102/idwbk3z9q_flt.fits[sci,1]
+[INFO    ] Using WCSLIB-based coordinate transformation...
+[INFO    ] stepsize = 10
+[INFO    ] Applying sky value of 0.605545 to /Users/kbhirombhakdi/_work/Sidekicks/20200821/idwbk3z3q_X01_201911_G102/idwbk3z3q_flt.fits[sci,1]
+[INFO    ] Using WCSLIB-based coordinate transformation...
+[INFO    ] stepsize = 10
+[INFO    ] Using WCSLIB-based coordinate transformation...
+[INFO    ] stepsize = 10
+[INFO    ] -Drizzling using kernel = turbo
+
+[INFO    ] -Drizzling using kernel = turbo
+
+[INFO    ] Using WCSLIB-based coordinate transformation...
+[INFO    ] stepsize = 10
+[INFO    ] -Drizzling using kernel = turbo
+
+[INFO    ] Using WCSLIB-based coordinate transformation...
+[INFO    ] stepsize = 10
+[INFO    ] -Drizzling using kernel = turbo
+
+[INFO    ] Using WCSLIB-based coordinate transformation...
+[INFO    ] stepsize = 10
+[INFO    ] -Drizzling using kernel = turbo
+
+[INFO    ] -Drizzling using kernel = turbo
+
+[INFO    ] -Generating simple FITS output: /Users/kbhirombhakdi/_work/Sidekicks/20200821/idwbk3z9q_X01_201911_G102/idwbk3z9q_single_sci.fits
+[INFO    ] -Generating simple FITS output: /Users/kbhirombhakdi/_work/Sidekicks/20200821/idwbk3z1q_X01_201911_G102/idwbk3z1q_single_sci.fits
+[INFO    ] -Generating simple FITS output: /Users/kbhirombhakdi/_work/Sidekicks/20200821/idwbk3z7q_X01_201911_G102/idwbk3z7q_single_sci.fits
+[INFO    ] -Generating simple FITS output: /Users/kbhirombhakdi/_work/Sidekicks/20200821/idwbk3zaq_X01_201911_G102/idwbk3zaq_single_sci.fits
+[INFO    ] -Generating simple FITS output: /Users/kbhirombhakdi/_work/Sidekicks/20200821/idwbk3z3q_X01_201911_G102/idwbk3z3q_single_sci.fits
+[INFO    ] -Generating simple FITS output: /Users/kbhirombhakdi/_work/Sidekicks/20200821/idwbk3z4q_X01_201911_G102/idwbk3z4q_single_sci.fits
+[WARNING ] /Users/kbhirombhakdi/anaconda3/envs/py3/lib/python3.7/site-packages/astropy/io/fits/card.py:1003: VerifyWarning: Card is too long, comment will be truncated.
+  VerifyWarning)
+
+[WARNING ] /Users/kbhirombhakdi/anaconda3/envs/py3/lib/python3.7/site-packages/astropy/io/fits/card.py:1003: VerifyWarning: Card is too long, comment will be truncated.
+  VerifyWarning)
+
+[WARNING ] /Users/kbhirombhakdi/anaconda3/envs/py3/lib/python3.7/site-packages/astropy/io/fits/card.py:1003: VerifyWarning: Card is too long, comment will be truncated.
+  VerifyWarning)
+
+[WARNING ] /Users/kbhirombhakdi/anaconda3/envs/py3/lib/python3.7/site-packages/astropy/io/fits/card.py:1003: VerifyWarning: Card is too long, comment will be truncated.
+  VerifyWarning)
+
+[WARNING ] /Users/kbhirombhakdi/anaconda3/envs/py3/lib/python3.7/site-packages/astropy/io/fits/card.py:1003: VerifyWarning: Card is too long, comment will be truncated.
+  VerifyWarning)
+
+[WARNING ] /Users/kbhirombhakdi/anaconda3/envs/py3/lib/python3.7/site-packages/astropy/io/fits/card.py:1003: VerifyWarning: Card is too long, comment will be truncated.
+  VerifyWarning)
+
+[INFO    ] Writing out image to disk: /Users/kbhirombhakdi/_work/Sidekicks/20200821/idwbk3z3q_X01_201911_G102/idwbk3z3q_single_sci.fits
+[INFO    ] Writing out image to disk: /Users/kbhirombhakdi/_work/Sidekicks/20200821/idwbk3z7q_X01_201911_G102/idwbk3z7q_single_sci.fits
+[INFO    ] Writing out image to disk: /Users/kbhirombhakdi/_work/Sidekicks/20200821/idwbk3zaq_X01_201911_G102/idwbk3zaq_single_sci.fits
+[INFO    ] Writing out image to disk: /Users/kbhirombhakdi/_work/Sidekicks/20200821/idwbk3z9q_X01_201911_G102/idwbk3z9q_single_sci.fits
+[INFO    ] Writing out image to disk: /Users/kbhirombhakdi/_work/Sidekicks/20200821/idwbk3z1q_X01_201911_G102/idwbk3z1q_single_sci.fits
+[INFO    ] Writing out image to disk: /Users/kbhirombhakdi/_work/Sidekicks/20200821/idwbk3z4q_X01_201911_G102/idwbk3z4q_single_sci.fits
+[INFO    ] Writing out image to disk: /Users/kbhirombhakdi/_work/Sidekicks/20200821/idwbk3zaq_X01_201911_G102/idwbk3zaq_single_wht.fits
+[INFO    ] Writing out image to disk: /Users/kbhirombhakdi/_work/Sidekicks/20200821/idwbk3z3q_X01_201911_G102/idwbk3z3q_single_wht.fits
+[INFO    ] Writing out image to disk: /Users/kbhirombhakdi/_work/Sidekicks/20200821/idwbk3z7q_X01_201911_G102/idwbk3z7q_single_wht.fits
+[INFO    ] Writing out image to disk: /Users/kbhirombhakdi/_work/Sidekicks/20200821/idwbk3z9q_X01_201911_G102/idwbk3z9q_single_wht.fits
+[INFO    ] Writing out image to disk: /Users/kbhirombhakdi/_work/Sidekicks/20200821/idwbk3z1q_X01_201911_G102/idwbk3z1q_single_wht.fits
+[INFO    ] Writing out image to disk: /Users/kbhirombhakdi/_work/Sidekicks/20200821/idwbk3z4q_X01_201911_G102/idwbk3z4q_single_wht.fits
+[INFO    ] ==== Processing Step Separate Drizzle finished at 15:50:32.00 (21/08/2020)
+[INFO    ] ==== Processing Step  Create Median  started at  15:50:32.011 (21/08/2020)
+[INFO    ] 
+[INFO    ] USER INPUT PARAMETERS for Create Median Step:
+[INFO    ] 	combine_bufsize :	None
+[INFO    ] 	combine_grow :	1
+[INFO    ] 	combine_hthresh :	None
+[INFO    ] 	combine_lthresh :	None
+[INFO    ] 	combine_maskpt :	0.3
+[INFO    ] 	combine_nhigh :	1
+[INFO    ] 	combine_nlow :	0
+[INFO    ] 	combine_nsigma :	4 3
+[INFO    ] 	combine_type :	median
+[INFO    ] 	compress :	False
+[INFO    ] 	median :	True
+[INFO    ] 	median_newmasks :	True
+[INFO    ] 	proc_unit :	native
+[INFO    ] reference sky value for image '/Users/kbhirombhakdi/_work/Sidekicks/20200821/idwbk3z1q_X01_201911_G102/idwbk3z1q_flt.fits' is 427.0993055238601
+[INFO    ] reference sky value for image '/Users/kbhirombhakdi/_work/Sidekicks/20200821/idwbk3z7q_X01_201911_G102/idwbk3z7q_flt.fits' is 425.9912257312699
+[INFO    ] reference sky value for image '/Users/kbhirombhakdi/_work/Sidekicks/20200821/idwbk3z4q_X01_201911_G102/idwbk3z4q_flt.fits' is 420.65663028190863
+[INFO    ] reference sky value for image '/Users/kbhirombhakdi/_work/Sidekicks/20200821/idwbk3zaq_X01_201911_G102/idwbk3zaq_flt.fits' is 358.09663917022726
+[INFO    ] reference sky value for image '/Users/kbhirombhakdi/_work/Sidekicks/20200821/idwbk3z9q_X01_201911_G102/idwbk3z9q_flt.fits' is 425.9924760563828
+[INFO    ] reference sky value for image '/Users/kbhirombhakdi/_work/Sidekicks/20200821/idwbk3z3q_X01_201911_G102/idwbk3z3q_flt.fits' is 423.4169730337438
+[INFO    ] Saving output median image to: 'X01_201911_G102_med.fits'
+[INFO    ] ==== Processing Step Create Median finished at 15:50:33.011 (21/08/2020)
+[INFO    ] ==== Processing Step  Blot  started at  15:50:33.013 (21/08/2020)
+[INFO    ] 
+[INFO    ] USER INPUT PARAMETERS for Blot Step:
+[INFO    ] 	blot_addsky :	True
+[INFO    ] 	blot_interp :	poly5
+[INFO    ] 	blot_sinscl :	1.0
+[INFO    ] 	blot_skyval :	0.0
+[INFO    ] 	coeffs :	True
+[INFO    ]     Blot: creating blotted image:  /Users/kbhirombhakdi/_work/Sidekicks/20200821/idwbk3z1q_X01_201911_G102/idwbk3z1q_flt.fits[sci,1]
+[INFO    ] Using default C-based coordinate transformation...
+[INFO    ] Applying sky value of 0.610812 to blotted image /Users/kbhirombhakdi/_work/Sidekicks/20200821/idwbk3z1q_X01_201911_G102/idwbk3z1q_flt.fits[sci,1]
+[INFO    ] -Generating simple FITS output: /Users/kbhirombhakdi/_work/Sidekicks/20200821/idwbk3z1q_X01_201911_G102/idwbk3z1q_sci1_blt.fits
+[INFO    ] Writing out image to disk: /Users/kbhirombhakdi/_work/Sidekicks/20200821/idwbk3z1q_X01_201911_G102/idwbk3z1q_sci1_blt.fits
+[INFO    ]     Blot: creating blotted image:  /Users/kbhirombhakdi/_work/Sidekicks/20200821/idwbk3z7q_X01_201911_G102/idwbk3z7q_flt.fits[sci,1]
+[INFO    ] Using default C-based coordinate transformation...
+[INFO    ] Applying sky value of 0.609227 to blotted image /Users/kbhirombhakdi/_work/Sidekicks/20200821/idwbk3z7q_X01_201911_G102/idwbk3z7q_flt.fits[sci,1]
+[INFO    ] -Generating simple FITS output: /Users/kbhirombhakdi/_work/Sidekicks/20200821/idwbk3z7q_X01_201911_G102/idwbk3z7q_sci1_blt.fits
+[INFO    ] Writing out image to disk: /Users/kbhirombhakdi/_work/Sidekicks/20200821/idwbk3z7q_X01_201911_G102/idwbk3z7q_sci1_blt.fits
+[INFO    ]     Blot: creating blotted image:  /Users/kbhirombhakdi/_work/Sidekicks/20200821/idwbk3z4q_X01_201911_G102/idwbk3z4q_flt.fits[sci,1]
+[INFO    ] Using default C-based coordinate transformation...
+[INFO    ] Applying sky value of 0.601598 to blotted image /Users/kbhirombhakdi/_work/Sidekicks/20200821/idwbk3z4q_X01_201911_G102/idwbk3z4q_flt.fits[sci,1]
+[INFO    ] -Generating simple FITS output: /Users/kbhirombhakdi/_work/Sidekicks/20200821/idwbk3z4q_X01_201911_G102/idwbk3z4q_sci1_blt.fits
+[INFO    ] Writing out image to disk: /Users/kbhirombhakdi/_work/Sidekicks/20200821/idwbk3z4q_X01_201911_G102/idwbk3z4q_sci1_blt.fits
+[INFO    ]     Blot: creating blotted image:  /Users/kbhirombhakdi/_work/Sidekicks/20200821/idwbk3zaq_X01_201911_G102/idwbk3zaq_flt.fits[sci,1]
+[INFO    ] Using default C-based coordinate transformation...
+[INFO    ] Applying sky value of 0.597592 to blotted image /Users/kbhirombhakdi/_work/Sidekicks/20200821/idwbk3zaq_X01_201911_G102/idwbk3zaq_flt.fits[sci,1]
+[INFO    ] -Generating simple FITS output: /Users/kbhirombhakdi/_work/Sidekicks/20200821/idwbk3zaq_X01_201911_G102/idwbk3zaq_sci1_blt.fits
+[INFO    ] Writing out image to disk: /Users/kbhirombhakdi/_work/Sidekicks/20200821/idwbk3zaq_X01_201911_G102/idwbk3zaq_sci1_blt.fits
+[INFO    ]     Blot: creating blotted image:  /Users/kbhirombhakdi/_work/Sidekicks/20200821/idwbk3z9q_X01_201911_G102/idwbk3z9q_flt.fits[sci,1]
+[INFO    ] Using default C-based coordinate transformation...
+[INFO    ] Applying sky value of 0.609229 to blotted image /Users/kbhirombhakdi/_work/Sidekicks/20200821/idwbk3z9q_X01_201911_G102/idwbk3z9q_flt.fits[sci,1]
+[INFO    ] -Generating simple FITS output: /Users/kbhirombhakdi/_work/Sidekicks/20200821/idwbk3z9q_X01_201911_G102/idwbk3z9q_sci1_blt.fits
+[INFO    ] Writing out image to disk: /Users/kbhirombhakdi/_work/Sidekicks/20200821/idwbk3z9q_X01_201911_G102/idwbk3z9q_sci1_blt.fits
+[INFO    ]     Blot: creating blotted image:  /Users/kbhirombhakdi/_work/Sidekicks/20200821/idwbk3z3q_X01_201911_G102/idwbk3z3q_flt.fits[sci,1]
+[INFO    ] Using default C-based coordinate transformation...
+[INFO    ] Applying sky value of 0.605545 to blotted image /Users/kbhirombhakdi/_work/Sidekicks/20200821/idwbk3z3q_X01_201911_G102/idwbk3z3q_flt.fits[sci,1]
+[INFO    ] -Generating simple FITS output: /Users/kbhirombhakdi/_work/Sidekicks/20200821/idwbk3z3q_X01_201911_G102/idwbk3z3q_sci1_blt.fits
+[INFO    ] Writing out image to disk: /Users/kbhirombhakdi/_work/Sidekicks/20200821/idwbk3z3q_X01_201911_G102/idwbk3z3q_sci1_blt.fits
+[INFO    ] ==== Processing Step Blot finished at 15:50:35.353 (21/08/2020)
+[INFO    ] ==== Processing Step  Driz_CR  started at  15:50:35.355 (21/08/2020)
+[INFO    ] 
+[INFO    ] USER INPUT PARAMETERS for Driz_CR Step:
+[INFO    ] 	crbit :	4096
+[INFO    ] 	driz_cr :	True
+[INFO    ] 	driz_cr_corr :	True
+[INFO    ] 	driz_cr_ctegrow :	0
+[INFO    ] 	driz_cr_grow :	1
+[INFO    ] 	driz_cr_scale :	1.2 0.7
+[INFO    ] 	driz_cr_snr :	3.5 3.0
+[INFO    ] 	inmemory :	False
+[INFO    ] Executing 6 parallel workers
+[WARNING ] /Users/kbhirombhakdi/anaconda3/envs/py3/lib/python3.7/site-packages/drizzlepac/drizCR.py:205: RuntimeWarning: invalid value encountered in less_equal
+  tmp1 = t1 <= t2
+
+[WARNING ] /Users/kbhirombhakdi/anaconda3/envs/py3/lib/python3.7/site-packages/drizzlepac/drizCR.py:205: RuntimeWarning: invalid value encountered in less_equal
+  tmp1 = t1 <= t2
+
+[WARNING ] /Users/kbhirombhakdi/anaconda3/envs/py3/lib/python3.7/site-packages/drizzlepac/drizCR.py:205: RuntimeWarning: invalid value encountered in less_equal
+  tmp1 = t1 <= t2
+
+[WARNING ] /Users/kbhirombhakdi/anaconda3/envs/py3/lib/python3.7/site-packages/drizzlepac/drizCR.py:205: RuntimeWarning: invalid value encountered in less_equal
+  tmp1 = t1 <= t2
+
+[WARNING ] /Users/kbhirombhakdi/anaconda3/envs/py3/lib/python3.7/site-packages/drizzlepac/drizCR.py:205: RuntimeWarning: invalid value encountered in less_equal
+  tmp1 = t1 <= t2
+
+[WARNING ] /Users/kbhirombhakdi/anaconda3/envs/py3/lib/python3.7/site-packages/drizzlepac/drizCR.py:215: RuntimeWarning: invalid value encountered in less_equal
+  cr_mask = (t1 <= t2) | (tmp2 >= 9)
+
+[WARNING ] /Users/kbhirombhakdi/anaconda3/envs/py3/lib/python3.7/site-packages/drizzlepac/drizCR.py:215: RuntimeWarning: invalid value encountered in less_equal
+  cr_mask = (t1 <= t2) | (tmp2 >= 9)
+
+[WARNING ] /Users/kbhirombhakdi/anaconda3/envs/py3/lib/python3.7/site-packages/drizzlepac/drizCR.py:205: RuntimeWarning: invalid value encountered in less_equal
+  tmp1 = t1 <= t2
+
+[WARNING ] /Users/kbhirombhakdi/anaconda3/envs/py3/lib/python3.7/site-packages/drizzlepac/drizCR.py:215: RuntimeWarning: invalid value encountered in less_equal
+  cr_mask = (t1 <= t2) | (tmp2 >= 9)
+
+[WARNING ] /Users/kbhirombhakdi/anaconda3/envs/py3/lib/python3.7/site-packages/drizzlepac/drizCR.py:215: RuntimeWarning: invalid value encountered in less_equal
+  cr_mask = (t1 <= t2) | (tmp2 >= 9)
+
+[WARNING ] /Users/kbhirombhakdi/anaconda3/envs/py3/lib/python3.7/site-packages/drizzlepac/drizCR.py:215: RuntimeWarning: invalid value encountered in less_equal
+  cr_mask = (t1 <= t2) | (tmp2 >= 9)
+
+[INFO    ] Creating output: /Users/kbhirombhakdi/_work/Sidekicks/20200821/idwbk3z7q_X01_201911_G102/idwbk3z7q_sci1_crmask.fits
+[INFO    ] Creating output: /Users/kbhirombhakdi/_work/Sidekicks/20200821/idwbk3z1q_X01_201911_G102/idwbk3z1q_sci1_crmask.fits
+[WARNING ] /Users/kbhirombhakdi/anaconda3/envs/py3/lib/python3.7/site-packages/drizzlepac/drizCR.py:215: RuntimeWarning: invalid value encountered in less_equal
+  cr_mask = (t1 <= t2) | (tmp2 >= 9)
+
+[INFO    ] Creating output: /Users/kbhirombhakdi/_work/Sidekicks/20200821/idwbk3z4q_X01_201911_G102/idwbk3z4q_sci1_crmask.fits
+[INFO    ] Creating output: /Users/kbhirombhakdi/_work/Sidekicks/20200821/idwbk3zaq_X01_201911_G102/idwbk3zaq_sci1_crmask.fits
+[INFO    ] Creating output: /Users/kbhirombhakdi/_work/Sidekicks/20200821/idwbk3z9q_X01_201911_G102/idwbk3z9q_sci1_crmask.fits
+[INFO    ] Creating output: /Users/kbhirombhakdi/_work/Sidekicks/20200821/idwbk3z3q_X01_201911_G102/idwbk3z3q_sci1_crmask.fits
+[INFO    ] Created CR corrected file: '/Users/kbhirombhakdi/_work/Sidekicks/20200821/idwbk3z7q_X01_201911_G102/idwbk3z7q_crclean.fits'
+[INFO    ] Created CR corrected file: '/Users/kbhirombhakdi/_work/Sidekicks/20200821/idwbk3z1q_X01_201911_G102/idwbk3z1q_crclean.fits'
+[INFO    ] Created CR corrected file: '/Users/kbhirombhakdi/_work/Sidekicks/20200821/idwbk3z4q_X01_201911_G102/idwbk3z4q_crclean.fits'
+[INFO    ] Created CR corrected file: '/Users/kbhirombhakdi/_work/Sidekicks/20200821/idwbk3zaq_X01_201911_G102/idwbk3zaq_crclean.fits'
+[INFO    ] Created CR corrected file: '/Users/kbhirombhakdi/_work/Sidekicks/20200821/idwbk3z9q_X01_201911_G102/idwbk3z9q_crclean.fits'
+[INFO    ] Created CR corrected file: '/Users/kbhirombhakdi/_work/Sidekicks/20200821/idwbk3z3q_X01_201911_G102/idwbk3z3q_crclean.fits'
+[INFO    ] ==== Processing Step Driz_CR finished at 15:50:36.744 (21/08/2020)
+[INFO    ] ==== Processing Step  Final Drizzle  started at  15:50:36.755 (21/08/2020)
+[INFO    ] 
+[INFO    ] Interpreted paramDict with single=False as:
+{'build': True, 'stepsize': 10, 'coeffs': True, 'wcskey': '', 'wht_type': 'EXP', 'kernel': 'square', 'wt_scl': 'exptime', 'pixfrac': 1.0, 'fillval': None, 'maskval': None, 'bits': 0, 'units': 'cps'}
+[INFO    ] USER INPUT PARAMETERS for Final Drizzle Step:
+[INFO    ] 	bits :	0
+[INFO    ] 	build :	True
+[INFO    ] 	clean :	True
+[INFO    ] 	coeffs :	True
+[INFO    ] 	crbit :	4096
+[INFO    ] 	fillval :	None
+[INFO    ] 	kernel :	square
+[INFO    ] 	maskval :	None
+[INFO    ] 	pixfrac :	1.0
+[INFO    ] 	proc_unit :	native
+[INFO    ] 	stepsize :	10
+[INFO    ] 	units :	cps
+[INFO    ] 	wcskey :	
+[INFO    ] 	wht_type :	EXP
+[INFO    ] 	wt_scl :	exptime
+[INFO    ]   **Using sub-sampling value of 10 for kernel square
+[INFO    ] Running Drizzle to create output frame with WCS of: 
+[INFO    ] WCS Keywords
+[INFO    ] 
+[INFO    ] CD_11  CD_12: -1.8535123636411e-06 -3.356517570308e-05
+[INFO    ] CD_21  CD_22: -3.7573078339169e-05 1.5432356282565e-06
+[INFO    ] CRVAL    : 44.535928876384 -8.9662964459753
+[INFO    ] CRPIX    : 507.0 507.0
+[INFO    ] NAXIS    : 1014 1014
+[INFO    ] Plate Scale : 0.13542756566728567
+[INFO    ] ORIENTAT : -87.36754952931922
+[INFO    ] -Drizzle input: /Users/kbhirombhakdi/_work/Sidekicks/20200821/idwbk3z1q_X01_201911_G102/idwbk3z1q_flt.fits[sci,1]
+[INFO    ] Applying sky value of 0.610812 to /Users/kbhirombhakdi/_work/Sidekicks/20200821/idwbk3z1q_X01_201911_G102/idwbk3z1q_flt.fits[sci,1]
+[INFO    ] Applying EXPTIME weighting to DQ mask for chip 1
+[INFO    ] Using WCSLIB-based coordinate transformation...
+[INFO    ] stepsize = 10
+[INFO    ] -Drizzling using kernel = square
+
+[WARNING ] ! 10156 points were outside the output image.
+[INFO    ] -Drizzle input: /Users/kbhirombhakdi/_work/Sidekicks/20200821/idwbk3z7q_X01_201911_G102/idwbk3z7q_flt.fits[sci,1]
+[INFO    ] Applying sky value of 0.609227 to /Users/kbhirombhakdi/_work/Sidekicks/20200821/idwbk3z7q_X01_201911_G102/idwbk3z7q_flt.fits[sci,1]
+[INFO    ] Applying EXPTIME weighting to DQ mask for chip 1
+[INFO    ] Using WCSLIB-based coordinate transformation...
+[INFO    ] stepsize = 10
+[INFO    ] -Drizzling using kernel = square
+
+[WARNING ] ! 11704 points were outside the output image.
+[INFO    ] -Drizzle input: /Users/kbhirombhakdi/_work/Sidekicks/20200821/idwbk3z4q_X01_201911_G102/idwbk3z4q_flt.fits[sci,1]
+[INFO    ] Applying sky value of 0.601598 to /Users/kbhirombhakdi/_work/Sidekicks/20200821/idwbk3z4q_X01_201911_G102/idwbk3z4q_flt.fits[sci,1]
+[INFO    ] Applying EXPTIME weighting to DQ mask for chip 1
+[INFO    ] Using WCSLIB-based coordinate transformation...
+[INFO    ] stepsize = 10
+[INFO    ] -Drizzling using kernel = square
+
+[WARNING ] ! 31221 points were outside the output image.
+[INFO    ] -Drizzle input: /Users/kbhirombhakdi/_work/Sidekicks/20200821/idwbk3zaq_X01_201911_G102/idwbk3zaq_flt.fits[sci,1]
+[INFO    ] Applying sky value of 0.597592 to /Users/kbhirombhakdi/_work/Sidekicks/20200821/idwbk3zaq_X01_201911_G102/idwbk3zaq_flt.fits[sci,1]
+[INFO    ] Applying EXPTIME weighting to DQ mask for chip 1
+[INFO    ] Using WCSLIB-based coordinate transformation...
+[INFO    ] stepsize = 10
+[INFO    ] -Drizzling using kernel = square
+
+[WARNING ] ! 41811 points were outside the output image.
+[INFO    ] -Drizzle input: /Users/kbhirombhakdi/_work/Sidekicks/20200821/idwbk3z9q_X01_201911_G102/idwbk3z9q_flt.fits[sci,1]
+[INFO    ] Applying sky value of 0.609229 to /Users/kbhirombhakdi/_work/Sidekicks/20200821/idwbk3z9q_X01_201911_G102/idwbk3z9q_flt.fits[sci,1]
+[INFO    ] Applying EXPTIME weighting to DQ mask for chip 1
+[INFO    ] Using WCSLIB-based coordinate transformation...
+[INFO    ] stepsize = 10
+[INFO    ] -Drizzling using kernel = square
+
+[WARNING ] ! 21548 points were outside the output image.
+[INFO    ] -Drizzle input: /Users/kbhirombhakdi/_work/Sidekicks/20200821/idwbk3z3q_X01_201911_G102/idwbk3z3q_flt.fits[sci,1]
+[INFO    ] Applying sky value of 0.605545 to /Users/kbhirombhakdi/_work/Sidekicks/20200821/idwbk3z3q_X01_201911_G102/idwbk3z3q_flt.fits[sci,1]
+[INFO    ] Applying EXPTIME weighting to DQ mask for chip 1
+[INFO    ] Using WCSLIB-based coordinate transformation...
+[INFO    ] stepsize = 10
+[INFO    ] -Drizzling using kernel = square
+
+[WARNING ] ! 10849 points were outside the output image.
+[INFO    ] -Generating multi-extension output file:  X01_201911_G102_drz.fits
+[INFO    ] Deleted all instances of WCS with key A in extensions [1]
+[INFO    ] Writing out to disk: X01_201911_G102_drz.fits
+[WARNING ] /Users/kbhirombhakdi/anaconda3/envs/py3/lib/python3.7/site-packages/astropy/io/fits/card.py:1003: VerifyWarning: Card is too long, comment will be truncated.
+  VerifyWarning)
+
+[INFO    ] ==== Processing Step Final Drizzle finished at 15:50:39.848 (21/08/2020)
+[INFO    ] 
+[INFO    ] AstroDrizzle Version 3.1.6 is finished processing at 15:50:39.850 (21/08/2020).
+[INFO    ] 
+[INFO    ] 
+[INFO    ] 
+[INFO    ]    --------------------          --------------------
+[INFO    ]                    Step          Elapsed time
+[INFO    ]    --------------------          --------------------
+[INFO    ] 
+[INFO    ]          Initialization          0.9793 sec.
+[INFO    ]             Static Mask          0.0027 sec.
+[INFO    ]            Subtract Sky          0.7430 sec.
+[INFO    ]        Separate Drizzle          1.4456 sec.
+[INFO    ]           Create Median          1.0001 sec.
+[INFO    ]                    Blot          2.3409 sec.
+[INFO    ]                 Driz_CR          1.3892 sec.
+[INFO    ]           Final Drizzle          3.0924 sec.
+[INFO    ]    ====================          ====================
+[INFO    ]                   Total          10.9931 sec.
+[INFO    ] 
+[INFO    ] Removing intermediate files for /Users/kbhirombhakdi/_work/Sidekicks/20200821/idwbk3z1q_X01_201911_G102/idwbk3z1q_flt.fits
+[INFO    ] Removing intermediate files for /Users/kbhirombhakdi/_work/Sidekicks/20200821/idwbk3z7q_X01_201911_G102/idwbk3z7q_flt.fits
+[INFO    ] Removing intermediate files for /Users/kbhirombhakdi/_work/Sidekicks/20200821/idwbk3z4q_X01_201911_G102/idwbk3z4q_flt.fits
+[INFO    ] Removing intermediate files for /Users/kbhirombhakdi/_work/Sidekicks/20200821/idwbk3zaq_X01_201911_G102/idwbk3zaq_flt.fits
+[INFO    ] Removing intermediate files for /Users/kbhirombhakdi/_work/Sidekicks/20200821/idwbk3z9q_X01_201911_G102/idwbk3z9q_flt.fits
+[INFO    ] Removing intermediate files for /Users/kbhirombhakdi/_work/Sidekicks/20200821/idwbk3z3q_X01_201911_G102/idwbk3z3q_flt.fits
+[INFO    ] Trailer file written to:  astrodrizzle.log

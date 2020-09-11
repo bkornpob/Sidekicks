@@ -1,0 +1,8 @@
+,index,filepath,sci_ext_num,ROOTNAME,DATE-OBS,FILTER,PA_V3,SUBARRAY,POSTARG1,POSTARG2,EXPSTART,EXPTIME,IDCSCALE,ORIENTAT
+2,2,/Users/kbhirombhakdi/_work/_data/14022/mastDownload/HST/icsf03msq/icsf03msq_flt.fits,1,icsf03msq,2015-01-04,G102,171.034897,False,0.0,0.0,57026.19811725,72.939018,0.1282500028610229,-144.2785566364907
+3,3,/Users/kbhirombhakdi/_work/_data/14022/mastDownload/HST/icsf03myq/icsf03myq_flt.fits,1,icsf03myq,2015-01-04,G102,171.029205,False,0.0,-15.0,57026.20809392,72.939018,0.1282500028610229,-144.2842693134961
+5,5,/Users/kbhirombhakdi/_work/_data/14022/mastDownload/HST/icsf02j3q/icsf02j3q_flt.fits,1,icsf02j3q,2015-01-27,F098M,231.466293,False,0.0,0.0,57049.77829095,11.729164,0.1282500028610229,-83.89964876925949
+1,1,/Users/kbhirombhakdi/_work/_data/14022/mastDownload/HST/icsf02j4q/icsf02j4q_flt.fits,1,icsf02j4q,2015-01-27,G102,231.466293,False,0.0,0.0,57049.77874206,449.233582,0.1282500028610229,-83.84257164224793
+6,6,/Users/kbhirombhakdi/_work/_data/14022/mastDownload/HST/icsf02j9q/icsf02j9q_flt.fits,1,icsf02j9q,2015-01-27,G102,231.466293,False,0.0,0.0,57049.79429762,449.233582,0.1282500028610229,-83.84257164224793
+4,4,/Users/kbhirombhakdi/_work/_data/14022/mastDownload/HST/icsf23ajq/icsf23ajq_flt.fits,1,icsf23ajq,2015-06-15,G102,73.05999,False,-5.0,5.0,57188.06849111,174.232788,0.1282500028610229,117.7510806379812
+0,0,/Users/kbhirombhakdi/_work/_data/14022/mastDownload/HST/icsf23bbq/icsf23bbq_flt.fits,1,icsf23bbq,2015-06-15,G102,73.059387,False,-10.0,15.0,57188.07938222,174.232788,0.1282500028610229,117.7504708622442
